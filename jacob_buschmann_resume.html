@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jacob Buschmann - Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body { background-color: #f8f9fa; }
+    .resume-header { background-color: #121722; color: white; padding: 2rem 1rem; text-align: center; }
+    .resume-header h1 { margin-bottom: 0; }
+    .section-title { border-bottom: 2px solid #4a6995; padding-bottom: 5px; margin-top: 1.5rem; }
+    .sidebar { background-color: #758089; padding: 1.5rem; }
+    .content { padding: 1.5rem; }
+    ul { padding-left: 1.25rem; }
+    .print-btn {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      z-index: 9999;
+    }
+    .container-fluid.limited-width {
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    @media print {
+      .print-btn { display: none !important; }
+      body { background: white !important; }
+      .container-fluid.limited-width { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <button class="btn btn-primary print-btn" onclick="window.print()">Print</button>
+  <div class="resume-header">
+    <h1>Jacob Buschmann</h1>
+    <p>Hudson, WI | <a href="mailto:buschmann.jake@gmail.com" class="text-white">buschmann.jake@gmail.com</a> | (760) 718-9504</p>
+    <p><a href="https://linkedin.com/in/jacobmbuschmann" class="text-white">linkedin.com/in/jacobmbuschmann</a> | <a href="https://github.com/buschmjm" class="text-white">github.com/buschmjm</a></p>
+  </div>
+
+  <div class="container-fluid limited-width">
+    <div class="row">
+      <aside class="col-md-4 sidebar">
+        <h4 class="section-title">Skills</h4>
+        <h6>Programming & Development</h6>
+        <ul class="small">
+          <li>JavaScript, Python, HTML/CSS, Node.JS, Flask</li>
+        </ul>
+
+        <h6>Automation & RPA</h6>
+        <ul class="small">
+          <li>UiPath, Power Automate, Zapier, Google Apps Script</li>
+        </ul>
+
+        <h6>Low-Code/No-Code</h6>
+        <ul class="small">
+          <li>AppSheet, FlutterFlow, Anvil, WordPress (Bricks Builder, Formidable Forms)</li>
+        </ul>
+
+        <h6>Cloud & IT Administration</h6>
+        <ul class="small">
+          <li>Office 365 Admin, Microsoft Purview, Google Workspace Admin</li>
+          <li>Google Cloud, Firebase, AWS (basic)</li>
+        </ul>
+
+        <h6>Tools & IT Ops</h6>
+        <ul class="small">
+          <li>Git, GitHub, VS Code, PowerShell</li>
+        </ul>
+
+        <h6>Core IT Competencies</h6>
+        <ul class="small">
+          <li>Process Automation, REST API Integrations</li>
+          <li>IT Service Management (ITSM), Identity & Access Management (IAM)</li>
+          <li>CRM & Internal Tools Development, Technical Documentation</li>
+        </ul>
+
+        <h4 class="section-title">Education</h4>
+        <p><strong>Technical Diploma</strong><br/>Software Development Specialist<br/>Chippewa Valley Technical College – Eau Claire, WI</p>
+      </aside>
+
+      <main class="col-md-8 content">
+        <h4 class="section-title">Professional Summary</h4>
+        <p>
+          Adaptable and driven IT professional with over 6 years of comprehensive experience in systems administration, automation, software development, and cloud platforms. Recognized for delivering impactful solutions through automation tools and integration strategies that improve efficiency and reduce costs. Skilled in UiPath, Power Automate, AppSheet, and cloud-based tools. U.S. Navy veteran known for structured execution, organizational excellence, and cross-functional collaboration. Proven success in building internal applications using AppSheet and FlutterFlow, developing API-driven workflows, and optimizing enterprise-wide systems through strategic integrations. Passionate about leveraging technology to drive meaningful, measurable results, and eager to contribute expertise and energy to forward-thinking teams.
+        </p>
+
+        <h4 class="section-title">Professional Experience</h4>
+
+        <div>
+          <h6 class="fw-bold mb-0">Systems Administrator</h6>
+          <p class="text-muted mb-1">Matt’s Moving – Saint Paul, MN | July 2022 – Present</p>
+          <ul>
+            <li>Built and maintained AppSheet applications used across multiple departments to streamline workflows and centralize data access.</li>
+            <li>Connected AppSheet to custom Google Apps Script functions and third-party APIs to automate information transfers and reduce bottlenecks between teams.</li>
+            <li>Implemented automation workflows in Zapier that save dozens of man-hours each week by eliminating repetitive tasks and improving operational efficiency.</li>
+            <li>Integrated APIs from Stripe, Google Maps, QuickBooks, and Supermove to unify siloed systems and improve accuracy in reporting and billing processes.</li>
+            <li>Managed Active Directory, Windows/Linux server environments, and oversaw infrastructure to ensure reliability and security.</li>
+            <li>Maintained Microsoft Purview policies and Google Workspace Admin settings to enforce compliance and streamline user management.</li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="fw-bold mb-0">Sales Director</h6>
+          <p class="text-muted mb-1">Matt’s Moving – Saint Paul, MN | July 2019 – July 2022</p>
+          <ul>
+            <li>Led tech-enabled process improvement initiatives based on business feedback.</li>
+            <li>Built dashboards and CRM tools to monitor lead flow and conversion metrics.</li>
+            <li>Facilitated CRM transitions and end-user adoption through documentation and support.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="fw-bold mb-0">Personnel Specialist (Administrative)</h6>
+          <p class="text-muted mb-1">U.S. Navy | 2012 – 2016</p>
+          <ul>
+            <li>Maintained classified records and handled personnel operations with precision.</li>
+            <li>Provided administrative support in high-pressure, high-security environments.</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

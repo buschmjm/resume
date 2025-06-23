@@ -7,119 +7,133 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <style>
     body { background-color: #f8f9fa; }
-    .resume-header { background-color: #121722; color: white; padding: 2rem 1rem; text-align: center; }
-    .resume-header h1 { margin-bottom: 0; }
-    .section-title { border-bottom: 2px solid #4a6995; padding-bottom: 5px; margin-top: 1.5rem; }
-    .sidebar { background-color: #758089; padding: 1.5rem; }
-    .content { padding: 1.5rem; }
-    ul { padding-left: 1.25rem; }
-    .print-btn {
-      position: fixed;
-      top: 1.5rem;
-      right: 2rem;
-      z-index: 9999;
+    .resume-header { background-color: #121722; color: white; padding: 2.5rem 1rem 1.5rem 1rem; text-align: center; }
+    .resume-header h1 { font-size: 3rem; letter-spacing: 0.2em; margin-bottom: 0.5rem; font-weight: 700; }
+    .resume-header h2 { font-size: 1.5rem; font-weight: 400; letter-spacing: 0.1em; margin-bottom: 1rem; }
+    .contact-info { margin-bottom: 1.5rem; }
+    .contact-info .row { justify-content: center; }
+    .section-title { border-bottom: 2px solid #4a6995; padding-bottom: 5px; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.05em; }
+    .about-section, .skills-section, .exp-section, .edu-section { margin-bottom: 2rem; }
+    .skills-list { columns: 2; -webkit-columns: 2; -moz-columns: 2; font-size: 0.98rem; }
+    .skills-list li { margin-bottom: 0.5rem; }
+    .exp-title { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.1rem; }
+    .exp-company { font-size: 0.98rem; color: #6c757d; margin-bottom: 0.5rem; }
+    .exp-list { margin-bottom: 1.2rem; }
+    .edu-title { font-weight: 600; }
+    .course-list { font-size: 0.98rem; margin-bottom: 0.5rem; }
+    @media print {
+      .print-btn { display: none !important; }
+      body { background: white !important; }
+      .container-fluid.limited-width { box-shadow: none; }
     }
     .container-fluid.limited-width {
       max-width: 8.5in;
       margin: 0 auto;
       background: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      padding-bottom: 2rem;
     }
-    @media print {
-      .print-btn { display: none !important; }
-      body { background: white !important; }
-      .container-fluid.limited-width { box-shadow: none; }
+    .print-btn {
+      position: fixed;
+      top: 1.5rem;
+      right: 2rem;
+      z-index: 9999;
     }
   </style>
 </head>
 <body>
   <button class="btn btn-primary print-btn" onclick="window.print()">Print</button>
   <div class="resume-header">
-    <h1>Jacob Buschmann</h1>
-    <p>Hudson, WI | <a href="mailto:buschmann.jake@gmail.com" class="text-white">buschmann.jake@gmail.com</a> | (760) 718-9504</p>
-    <p><a href="https://linkedin.com/in/jacobmbuschmann" class="text-white">linkedin.com/in/jacobmbuschmann</a> | <a href="https://github.com/buschmjm" class="text-white">github.com/buschmjm</a></p>
+    <h1>JACOB<br>BUSCHMANN</h1>
+    <h2>TECHNOLOGY STRATEGY & PROJECT MANAGEMENT SPECIALIST</h2>
+    <div class="contact-info">
+      <div class="row g-3">
+        <div class="col-auto"><strong>PHONE</strong><br><a href="tel:7607189504" class="text-white">760-718-9504</a></div>
+        <div class="col-auto"><strong>WEBSITE</strong><br><a href="https://buschmjm.github.io/resume/" class="text-white">buschmjm.github.io/resume/</a></div>
+        <div class="col-auto"><strong>EMAIL</strong><br><a href="mailto:buschmann.jake@gmail.com" class="text-white">buschmann.jake@gmail.com</a></div>
+      </div>
+    </div>
   </div>
-
   <div class="container-fluid limited-width">
     <div class="row">
-      <aside class="col-md-4 sidebar">
-        <h4 class="section-title">Skills</h4>
-        <h6>Programming & Development</h6>
-        <ul class="small">
-          <li>JavaScript, Python, HTML/CSS, Node.JS, Flask</li>
-        </ul>
-
-        <h6>Automation & RPA</h6>
-        <ul class="small">
-          <li>UiPath, Power Automate, Zapier, Google Apps Script</li>
-        </ul>
-
-        <h6>Low-Code/No-Code</h6>
-        <ul class="small">
-          <li>AppSheet, FlutterFlow, Anvil, WordPress (Bricks Builder, Formidable Forms)</li>
-        </ul>
-
-        <h6>Cloud & IT Administration</h6>
-        <ul class="small">
-          <li>Office 365 Admin, Microsoft Purview, Google Workspace Admin</li>
-          <li>Google Cloud, Firebase, AWS (basic)</li>
-        </ul>
-
-        <h6>Tools & IT Ops</h6>
-        <ul class="small">
-          <li>Git, GitHub, VS Code, PowerShell</li>
-        </ul>
-
-        <h6>Core IT Competencies</h6>
-        <ul class="small">
-          <li>Process Automation, REST API Integrations</li>
-          <li>IT Service Management (ITSM), Identity & Access Management (IAM)</li>
-          <li>CRM & Internal Tools Development, Technical Documentation</li>
-        </ul>
-
-        <h4 class="section-title">Education</h4>
-        <p><strong>Technical Diploma</strong><br/>Software Development Specialist<br/>Chippewa Valley Technical College – Eau Claire, WI</p>
-      </aside>
-
-      <main class="col-md-8 content">
-        <h4 class="section-title">Professional Summary</h4>
-        <p>
-          Adaptable and driven IT professional with over 6 years of comprehensive experience in systems administration, automation, software development, and cloud platforms. Recognized for delivering impactful solutions through automation tools and integration strategies that improve efficiency and reduce costs. Skilled in UiPath, Power Automate, AppSheet, and cloud-based tools. U.S. Navy veteran known for structured execution, organizational excellence, and cross-functional collaboration. Proven success in building internal applications using AppSheet and FlutterFlow, developing API-driven workflows, and optimizing enterprise-wide systems through strategic integrations. Passionate about leveraging technology to drive meaningful, measurable results, and eager to contribute expertise and energy to forward-thinking teams.
-        </p>
-
-        <h4 class="section-title">Professional Experience</h4>
-
-        <div>
-          <h6 class="fw-bold mb-0">Systems Administrator</h6>
-          <p class="text-muted mb-1">Matt’s Moving – Saint Paul, MN | July 2022 – Present</p>
-          <ul>
-            <li>Built and maintained AppSheet applications used across multiple departments to streamline workflows and centralize data access.</li>
-            <li>Connected AppSheet to custom Google Apps Script functions and third-party APIs to automate information transfers and reduce bottlenecks between teams.</li>
-            <li>Implemented automation workflows in Zapier that save dozens of man-hours each week by eliminating repetitive tasks and improving operational efficiency.</li>
-            <li>Integrated APIs from Stripe, Google Maps, QuickBooks, and Supermove to unify siloed systems and improve accuracy in reporting and billing processes.</li>
-            <li>Managed Active Directory, Windows/Linux server environments, and oversaw infrastructure to ensure reliability and security.</li>
-            <li>Maintained Microsoft Purview policies and Google Workspace Admin settings to enforce compliance and streamline user management.</li>
+      <div class="col-md-7">
+        <div class="about-section">
+          <div class="section-title">SUMMARY</div>
+          <p>I work across systems, cloud platforms, and internal tools to make businesses run smoother. I don’t just fix things when they break. I build better ways to do the work. My background covers automation, infrastructure, app development, and integrations across multiple platforms. I stay focused on what’s useful to the team, and I build with long term reliability in mind. I’m not afraid to take ownership, and I know how to lead technical projects that make a real difference.</p>
+          <div class="section-title">ABOUT ME - PROFESSIONAL</div>
+          <p>I lead technical projects from start to finish. That includes building internal tools, automating workflows, handling system integrations, and managing infrastructure across cloud and on prem. I’ve been the go to person for our leadership team when something needs to change or improve. I work with every department and make sure the systems I build actually match how people work, day to day. My background covers a wide range of tools and platforms, and I’m always learning new ones to stay ahead of what’s needed.</p>
+          <div class="section-title">ABOUT ME - PERSONAL</div>
+          <p>I’m a husband and a dad before anything else. Most of my free time is spent with my family — exploring outside, camping, or just being together. I like hands-on projects and finding ways to make things work better. That usually means tinkering with 3D printing, automating something around the house, or working on a random side project just to see if I can. I’m always curious, always building, and always looking for ways to make life a little easier.</p>
+        </div>
+        <div class="exp-section">
+          <div class="section-title">EXPERIENCE</div>
+          <div class="mb-3">
+            <div class="exp-title">Systems Administrator & Technical Project Lead</div>
+            <div class="exp-company">Matt’s Moving – Saint Paul, MN | July 2022 – Present</div>
+            <ul class="exp-list">
+              <li>Sole technical owner across all IT systems, automations, infrastructure, cloud services, integrations, and internal tool development for a fast-paced mid-sized company</li>
+              <li>Managed Active Directory, Office 365, Windows/Linux environments, and enforced security and compliance policies through Microsoft Purview and Google Workspace Admin</li>
+              <li>Designed and deployed internal apps using AppSheet, FlutterFlow, and Firebase to streamline operations across sales, dispatch, HR, accounting, and fleet management</li>
+              <li>Created custom automation workflows in Zapier, Google Apps Script, and Power Automate that save over 100+ hours per month by eliminating manual entry and improving data sync between systems</li>
+              <li>Integrated key third-party platforms such as Stripe, QuickBooks, Supermove, and Google Maps APIs to unify CRM, billing, scheduling, and reporting systems</li>
+              <li>Acted as the primary point of contact for C-suite executives and department heads, translating business needs into technical solutions and managing project roadmaps</li>
+              <li>Oversaw the planning and rollout of cross-functional tech projects, managing timelines, scope, and adoption across non-technical teams</li>
+              <li>Wrote and maintained technical documentation, including standard operating procedures, training guides, and architecture diagrams</li>
+              <li>Supported staff onboarding, account provisioning, and troubleshooting across all company systems, ensuring minimal downtime and high user satisfaction</li>
+              <li>Provided in-house consultation on cloud strategy and data compliance, including selecting tools, reviewing vendor security, and implementing multi-cloud best practices</li>
+            </ul>
+          </div>
+          <div class="mb-3">
+            <div class="exp-title">Sales Director & Systems Strategist</div>
+            <div class="exp-company">Matt’s Moving – Saint Paul, MN | July 2019 – July 2022</div>
+            <ul class="exp-list">
+              <li>Led the sales department while simultaneously building internal systems to manage lead tracking, job scheduling, and performance analytics</li>
+              <li>Built real-time dashboards and reporting systems using Google Sheets, Data Studio, and AppSheet</li>
+              <li>Initiated and oversaw the department’s CRM transitions, creating documentation and training to ensure successful adoption</li>
+              <li>Partnered with leadership to redesign workflows across sales, dispatch, and customer service for improved communication and reduced friction</li>
+              <li>Provided ongoing support and iterative updates to internal systems based on team feedback</li>
+            </ul>
+          </div>
+          <div class="mb-3">
+            <div class="exp-title">Administrative Specialist</div>
+            <div class="exp-company">United States Navy | 2012 – 2016</div>
+            <ul class="exp-list">
+              <li>Managed highly sensitive and classified personnel files and administrative operations within secure, fast-paced environments</li>
+              <li>Maintained accurate reporting and communication with both leadership and enlisted personnel</li>
+              <li>Developed strong habits in structured execution, accountability, and supporting mission-critical logistics under pressure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="skills-section">
+          <div class="section-title">SKILLS</div>
+          <ul class="skills-list">
+            <li>Systems Administration (Active Directory, Windows/Linux, Office 365, Google Workspace)</li>
+            <li>Process Automation (Zapier, UiPath, Power Automate, Google Apps Script)</li>
+            <li>Cloud Platforms (AWS, Google Cloud Platform, Firebase, Azure – familiar)</li>
+            <li>App Development (AppSheet, FlutterFlow, WordPress, Bricks Builder, Formidable Forms)</li>
+            <li>API Integrations (Stripe, QuickBooks, Google Maps, Supermove, REST APIs)</li>
+            <li>Infrastructure Management, IAM, ITSM, Security Compliance (Microsoft Purview, Admin Console)</li>
+            <li>Project Management (Cross-team coordination, stakeholder communication, C-suite reporting)</li>
+            <li>Programming & Tools (Python, JavaScript, HTML/CSS, Flask, Node.js, Git, VS Code, PowerShell)</li>
           </ul>
         </div>
-        <div>
-          <h6 class="fw-bold mb-0">Sales Director</h6>
-          <p class="text-muted mb-1">Matt’s Moving – Saint Paul, MN | July 2019 – July 2022</p>
-          <ul>
-            <li>Led tech-enabled process improvement initiatives based on business feedback.</li>
-            <li>Built dashboards and CRM tools to monitor lead flow and conversion metrics.</li>
-            <li>Facilitated CRM transitions and end-user adoption through documentation and support.</li>
+        <div class="edu-section">
+          <div class="section-title">EDUCATION</div>
+          <div class="edu-title">Technical Diploma – IT – Software Development Specialist</div>
+          <div>Chippewa Valley Technical College – Eau Claire, WI</div>
+          <div class="course-list">Coursework included: Systems Analysis, Software Design, JavaScript, Python, Database Design, Web Development, Cloud Fundamentals</div>
+          <div class="section-title" style="margin-top:1.5rem;">Ongoing Professional Development</div>
+          <div>Actively enrolled in self-paced online training to stay up to date on modern technologies and best practices</div>
+          <ul class="course-list">
+            <li>CompTIA Cloud+ (CV0-004) All-in-One — Anthony Sequeira & Michael Shannon (Udemy)</li>
+            <li>Google Cloud Architect Bootcamp – Coursera</li>
+            <li>JavaScript and Node.js Mastery – Udemy</li>
+            <li>Complete UIPath RPA Developer Course – Udemy</li>
           </ul>
         </div>
-
-        <div>
-          <h6 class="fw-bold mb-0">Personnel Specialist (Administrative)</h6>
-          <p class="text-muted mb-1">U.S. Navy | 2012 – 2016</p>
-          <ul>
-            <li>Maintained classified records and handled personnel operations with precision.</li>
-            <li>Provided administrative support in high-pressure, high-security environments.</li>
-          </ul>
-        </div>
-      </main>
+      </div>
     </div>
   </div>
 </body>

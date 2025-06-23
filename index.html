@@ -7,54 +7,58 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <style>
     body { background-color: #f8f9fa; }
-    .resume-header { background-color: #121722; color: white; padding: 2rem 1rem; text-align: center; }
-    .resume-header h1 { margin-bottom: 0; letter-spacing: 0.1em; font-size: 2.5rem; }
-    .resume-header h2 { font-size: 1.5rem; font-weight: 400; letter-spacing: 0.1em; margin-top: 0.5rem; }
-    .section-title { border-bottom: 2px solid #4a6995; padding-bottom: 5px; margin-top: 1.5rem; }
-    .sidebar { background-color: #758089; padding: 1.5rem; color: #fff; }
-    .sidebar a { color: #fff; text-decoration: underline; }
-    .content { padding: 1.5rem; }
-    ul { padding-left: 1.25rem; }
+    .resume-wrapper { max-width: 900px; margin: 2rem auto; background: #fff; box-shadow: 0 0 16px rgba(0,0,0,0.08); border-radius: 12px; overflow: hidden; }
+    .resume-header { background: linear-gradient(90deg, #121722 70%, #4a6995 100%); color: white; padding: 2.5rem 2rem 1.5rem 2rem; text-align: left; }
+    .resume-header h1 { margin-bottom: 0.25rem; font-size: 2.7rem; font-weight: 700; letter-spacing: 0.08em; }
+    .resume-header h2 { font-size: 1.25rem; font-weight: 400; letter-spacing: 0.08em; margin-bottom: 0; }
+    .resume-header .contact { margin-top: 1.2rem; font-size: 1.05rem; }
+    .resume-header .contact span { display: inline-block; margin-right: 1.5rem; }
+    .resume-main { display: flex; flex-wrap: wrap; }
+    .resume-sidebar { background: #f4f6fa; color: #222; flex: 0 0 270px; max-width: 270px; padding: 2rem 1.5rem 2rem 2rem; border-right: 1px solid #e0e4ea; }
+    .resume-content { flex: 1 1 0; padding: 2rem 2.5rem; }
+    .section-title { color: #4a6995; font-size: 1.1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.7rem; letter-spacing: 0.04em; border-bottom: 1.5px solid #e0e4ea; padding-bottom: 0.2rem; }
+    .skills-list { columns: 1; font-size: 0.98rem; margin-bottom: 1.2rem; }
+    .skills-list li { margin-bottom: 0.4rem; }
+    .contact-list { list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 1rem; }
+    .contact-list li { margin-bottom: 0.7rem; }
+    .contact-label { font-weight: 600; color: #4a6995; }
+    .about-section { margin-bottom: 1.2rem; }
+    .resume-content ul { margin-bottom: 1.2rem; }
+    .resume-content li { margin-bottom: 0.5rem; }
+    .job-title { font-weight: 600; font-size: 1.08rem; margin-bottom: 0; }
+    .job-meta { color: #6c757d; font-size: 0.98rem; margin-bottom: 0.2rem; }
+    @media (max-width: 900px) {
+      .resume-main { flex-direction: column; }
+      .resume-sidebar { max-width: 100%; border-right: none; border-bottom: 1px solid #e0e4ea; padding: 1.5rem 1.5rem 1rem 1.5rem; }
+      .resume-content { padding: 1.5rem 1.2rem; }
+    }
+    @media print {
+      .print-btn { display: none !important; }
+      body { background: white !important; }
+      .resume-wrapper { box-shadow: none; border-radius: 0; }
+    }
     .print-btn {
       position: fixed;
       top: 1.5rem;
       right: 2rem;
       z-index: 9999;
     }
-    .container-fluid.limited-width {
-      max-width: 8.5in;
-      margin: 0 auto;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
-    }
-    @media print {
-      .print-btn { display: none !important; }
-      body { background: white !important; }
-      .container-fluid.limited-width { box-shadow: none; }
-    }
-    .skills-list { columns: 2; -webkit-columns: 2; -moz-columns: 2; font-size: 0.95rem; }
-    .skills-list li { margin-bottom: 0.5rem; }
-    .about-section { margin-bottom: 1.5rem; }
-    .contact-list { list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
-    .contact-list li { margin-bottom: 0.5rem; }
-    .contact-label { font-weight: bold; }
   </style>
 </head>
 <body>
   <button class="btn btn-primary print-btn" onclick="window.print()">Print</button>
-  <div class="resume-header">
-    <h1>JACOB<br>BUSCHMANN</h1>
-    <h2>TECHNOLOGY STRATEGY & PROJECT MANAGEMENT SPECIALIST</h2>
-  </div>
-  <div class="container-fluid limited-width">
-    <div class="row">
-      <aside class="col-md-4 sidebar">
-        <h4 class="section-title">CONTACT</h4>
-        <ul class="contact-list">
-          <li><span class="contact-label">PHONE</span><br>760-718-9504</li>
-          <li><span class="contact-label">WEBSITE</span><br><a href="https://buschmjm.github.io/resume/" target="_blank">https://buschmjm.github.io/resume/</a></li>
-          <li><span class="contact-label">EMAIL</span><br><a href="mailto:buschmann.jake@gmail.com">BUSCHMANN.JAKE@GMAIL.COM</a></li>
-        </ul>
+  <div class="resume-wrapper">
+    <div class="resume-header">
+      <h1>JACOB BUSCHMANN</h1>
+      <h2>TECHNOLOGY STRATEGY & PROJECT MANAGEMENT SPECIALIST</h2>
+      <div class="contact mt-3">
+        <span><strong>Phone:</strong> 760-718-9504</span>
+        <span><strong>Email:</strong> <a href="mailto:buschmann.jake@gmail.com" class="text-white text-decoration-underline">BUSCHMANN.JAKE@GMAIL.COM</a></span>
+        <span><strong>Website:</strong> <a href="https://buschmjm.github.io/resume/" class="text-white text-decoration-underline" target="_blank">buschmjm.github.io/resume/</a></span>
+      </div>
+    </div>
+    <div class="resume-main">
+      <aside class="resume-sidebar">
         <h4 class="section-title">SKILLS</h4>
         <ul class="skills-list">
           <li>Systems Administration (Active Directory, Windows/Linux, Office 365, Google Workspace)</li>
@@ -67,8 +71,10 @@
           <li>Programming & Tools (Python, JavaScript, HTML/CSS, Flask, Node.js, Git, VS Code, PowerShell)</li>
         </ul>
         <h4 class="section-title">EDUCATION</h4>
-        <p><strong>Technical Diploma – IT – Software Development Specialist</strong><br>Chippewa Valley Technical College – Eau Claire, WI<br><span style="font-size:0.95em;">Coursework included: Systems Analysis, Software Design, JavaScript, Python, Database Design, Web Development, Cloud Fundamentals</span></p>
-        <p><strong>Ongoing Professional Development</strong><br>Actively enrolled in self-paced online training to stay up to date on modern technologies and best practices<br><span style="font-size:0.95em;">Recent courses include:</span></p>
+        <p class="mb-1"><strong>Technical Diploma – IT – Software Development Specialist</strong><br>Chippewa Valley Technical College – Eau Claire, WI</p>
+        <div style="font-size:0.97em; margin-bottom:0.7rem;">Coursework: Systems Analysis, Software Design, JavaScript, Python, Database Design, Web Development, Cloud Fundamentals</div>
+        <p class="mb-1"><strong>Ongoing Professional Development</strong></p>
+        <div style="font-size:0.97em;">Recent courses include:</div>
         <ul class="small">
           <li>CompTIA Cloud+ (CV0-004) All-in-One — Anthony Sequeira & Michael Shannon (Udemy)</li>
           <li>Google Cloud Architect Bootcamp – Coursera</li>
@@ -76,7 +82,7 @@
           <li>Complete UIPath RPA Developer Course – Udemy</li>
         </ul>
       </aside>
-      <main class="col-md-8 content">
+      <main class="resume-content">
         <h4 class="section-title">SUMMARY</h4>
         <div class="about-section">
           <p>I work across systems, cloud platforms, and internal tools to make businesses run smoother. I don’t just fix things when they break. I build better ways to do the work. My background covers automation, infrastructure, app development, and integrations across multiple platforms. I stay focused on what’s useful to the team, and I build with long term reliability in mind. I’m not afraid to take ownership, and I know how to lead technical projects that make a real difference.</p>
@@ -90,9 +96,9 @@
           <p>I’m a husband and a dad before anything else. Most of my free time is spent with my family — exploring outside, camping, or just being together. I like hands-on projects and finding ways to make things work better. That usually means tinkering with 3D printing, automating something around the house, or working on a random side project just to see if I can. I’m always curious, always building, and always looking for ways to make life a little easier.</p>
         </div>
         <h4 class="section-title">EXPERIENCE</h4>
-        <div>
-          <h6 class="fw-bold mb-0">Systems Administrator & Technical Project Lead</h6>
-          <p class="text-muted mb-1">Matt’s Moving – Saint Paul, MN | July 2022 – Present</p>
+        <div class="mb-4">
+          <div class="job-title">Systems Administrator & Technical Project Lead</div>
+          <div class="job-meta">Matt’s Moving – Saint Paul, MN | July 2022 – Present</div>
           <ul>
             <li>Sole technical owner across all IT systems, automations, infrastructure, cloud services, integrations, and internal tool development for a fast-paced mid-sized company</li>
             <li>Managed Active Directory, Office 365, Windows/Linux environments, and enforced security and compliance policies through Microsoft Purview and Google Workspace Admin</li>
@@ -106,9 +112,9 @@
             <li>Provided in-house consultation on cloud strategy and data compliance, including selecting tools, reviewing vendor security, and implementing multi-cloud best practices</li>
           </ul>
         </div>
-        <div>
-          <h6 class="fw-bold mb-0">Sales Director & Systems Strategist</h6>
-          <p class="text-muted mb-1">Matt’s Moving – Saint Paul, MN | July 2019 – July 2022</p>
+        <div class="mb-4">
+          <div class="job-title">Sales Director & Systems Strategist</div>
+          <div class="job-meta">Matt’s Moving – Saint Paul, MN | July 2019 – July 2022</div>
           <ul>
             <li>Led the sales department while simultaneously building internal systems to manage lead tracking, job scheduling, and performance analytics</li>
             <li>Built real-time dashboards and reporting systems using Google Sheets, Data Studio, and AppSheet</li>
@@ -117,9 +123,9 @@
             <li>Provided ongoing support and iterative updates to internal systems based on team feedback</li>
           </ul>
         </div>
-        <div>
-          <h6 class="fw-bold mb-0">Administrative Specialist</h6>
-          <p class="text-muted mb-1">United States Navy | 2012 – 2016</p>
+        <div class="mb-4">
+          <div class="job-title">Administrative Specialist</div>
+          <div class="job-meta">United States Navy | 2012 – 2016</div>
           <ul>
             <li>Managed highly sensitive and classified personnel files and administrative operations within secure, fast-paced environments</li>
             <li>Maintained accurate reporting and communication with both leadership and enlisted personnel</li>

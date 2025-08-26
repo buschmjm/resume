@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jacob Buschmann - Resume</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob Buschmann - Resume</title>
+  <!-- Bootstrap for basic styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* Colour palette and layout closely mirror the previous resume site */
     body { background-color: #f8f9fa; }
     .resume-wrapper { max-width: 900px; margin: 2rem auto; background: #fff; box-shadow: 0 0 16px rgba(0,0,0,0.08); border-radius: 12px; overflow: hidden; }
-    .resume-header { background: linear-gradient(90deg, #121722 70%, #4a6995 100%); color: white; padding: 2.5rem 2rem 1.5rem 2rem; text-align: left; }
+    .resume-header { background: linear-gradient(90deg, #121722 70%, #4a6995 100%); color: #fff; padding: 2.5rem 2rem 1.5rem 2rem; text-align: left; }
     .resume-header h1 { margin-bottom: 0.25rem; font-size: 2.7rem; font-weight: 700; letter-spacing: 0.08em; }
     .resume-header h2 { font-size: 1.25rem; font-weight: 400; letter-spacing: 0.08em; margin-bottom: 0; }
     .resume-header .contact { margin-top: 1.2rem; font-size: 1.05rem; }
@@ -17,12 +19,8 @@
     .resume-sidebar { background: #f4f6fa; color: #222; flex: 0 0 270px; max-width: 270px; padding: 2rem 1.5rem 2rem 2rem; border-right: 1px solid #e0e4ea; }
     .resume-content { flex: 1 1 0; padding: 2rem 2.5rem; }
     .section-title { color: #4a6995; font-size: 1.1rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.7rem; letter-spacing: 0.04em; border-bottom: 1.5px solid #e0e4ea; padding-bottom: 0.2rem; }
-    .skills-list { columns: 1; font-size: 0.98rem; margin-bottom: 1.2rem; }
+    .skills-list { columns: 1; font-size: 0.98rem; margin-bottom: 1.2rem; padding-left: 1.2rem; }
     .skills-list li { margin-bottom: 0.4rem; }
-    .contact-list { list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 1rem; }
-    .contact-list li { margin-bottom: 0.7rem; }
-    .contact-label { font-weight: 600; color: #4a6995; }
-    .about-section { margin-bottom: 1.2rem; }
     .resume-content ul { margin-bottom: 1.2rem; }
     .resume-content li { margin-bottom: 0.5rem; }
     .job-title { font-weight: 600; font-size: 1.08rem; margin-bottom: 0; }
@@ -46,11 +44,12 @@
   </style>
 </head>
 <body>
+  <!-- A button to allow easy printing/downloading of the resume PDF. Uses the existing filename so links don’t break. -->
   <button class="btn btn-primary print-btn" onclick="window.open('Buschmann_Resume_2025.pdf', '_blank')">Download PDF</button>
   <div class="resume-wrapper">
     <div class="resume-header">
       <h1>JACOB BUSCHMANN</h1>
-      <h2>TECHNOLOGY STRATEGY & PROJECT MANAGEMENT SPECIALIST</h2>
+      <h2>TECHNOLOGY STRATEGY &amp; OPERATIONS LEADER</h2>
       <div class="contact mt-3">
         <span><strong>Phone:</strong> 760-718-9504</span>
         <span><strong>Email:</strong> <a href="mailto:buschmann.jake@gmail.com" class="text-white text-decoration-underline">BUSCHMANN.JAKE@GMAIL.COM</a></span>
@@ -58,81 +57,76 @@
       </div>
     </div>
     <div class="resume-main">
+      <!-- Sidebar contains compact skills and education lists -->
       <aside class="resume-sidebar">
         <h4 class="section-title">SKILLS</h4>
         <ul class="skills-list">
-          <li>Systems Administration (Active Directory, Windows/Linux, Office 365, Google Workspace)</li>
+          <li>Systems Administration (Active Directory, Windows/Linux, Office 365, Google Workspace)</li>
           <li>Process Automation (Zapier, UiPath, Power Automate, Google Apps Script)</li>
-          <li>Cloud Platforms (AWS, Google Cloud Platform, Firebase, Azure – familiar)</li>
+          <li>Cloud Platforms (Google Cloud Platform, Firebase, AWS, Azure – familiar)</li>
           <li>App Development (AppSheet, FlutterFlow, WordPress, Bricks Builder, Formidable Forms)</li>
-          <li>API Integrations (Stripe, QuickBooks, Google Maps, Supermove, REST APIs)</li>
-          <li>Infrastructure Management, IAM, ITSM, Security Compliance (Microsoft Purview, Admin Console)</li>
-          <li>Project Management (Cross-team coordination, stakeholder communication, C-suite reporting)</li>
-          <li>Programming & Tools (Python, JavaScript, HTML/CSS, Flask, Node.js, Git, VS Code, PowerShell)</li>
+          <li>API &amp; Data Integrations (Stripe, QuickBooks, Google Maps, Supermove, REST APIs)</li>
+          <li>Infrastructure, IAM &amp; Compliance (Microsoft Purview, Admin Console)</li>
+          <li>Project &amp; Stakeholder Management (requirements gathering, planning, risk &amp; change management, KPI reviews, executive communication)</li>
+          <li>Programming &amp; Tools (Python, JavaScript, HTML/CSS, Flask, Node.js, Git, VS Code, PowerShell)</li>
         </ul>
         <h4 class="section-title">EDUCATION</h4>
-        <p class="mb-1"><strong>Technical Diploma – IT – Software Development Specialist</strong><br>Chippewa Valley Technical College – Eau Claire, WI</p>
-        <div style="font-size:0.97em; margin-bottom:0.7rem;">Coursework: Systems Analysis, Software Design, JavaScript, Python, Database Design, Web Development, Cloud Fundamentals</div>
-        <p class="mb-1"><strong>Ongoing Professional Development</strong></p>
-        <div style="font-size:0.97em;">Recent courses include:</div>
-        <ul class="small">
-          <li>CompTIA Cloud+ (CV0-004) All-in-One — Anthony Sequeira & Michael Shannon (Udemy)</li>
-          <li>Google Cloud Architect Bootcamp – Coursera</li>
-          <li>JavaScript and Node.js Mastery – Udemy</li>
-          <li>Complete UIPath RPA Developer Course – Udemy</li>
+        <p>Technical Diploma – IT – Software Development Specialist<br>
+        Chippewa Valley Technical College – Eau Claire, WI</p>
+        <p>Coursework: Systems Analysis, Software Design, JavaScript, Python, Database Design, Web Development, Cloud Fundamentals</p>
+        <h4 class="section-title">Ongoing Professional Development</h4>
+        <ul class="skills-list">
+          <li>CompTIA Cloud+ (CV0‑004) All‑in‑One – Udemy</li>
+          <li>Google Cloud Architect Bootcamp – Coursera</li>
+          <li>JavaScript &amp; Node.js Mastery – Udemy</li>
+          <li>Complete UiPath RPA Developer Course – Udemy</li>
         </ul>
       </aside>
-      <main class="resume-content">
+      <!-- Main content area -->
+      <div class="resume-content">
         <h4 class="section-title">SUMMARY</h4>
-        <div class="about-section">
-          <p>I work across systems, cloud platforms, and internal tools to make businesses run smoother. I don’t just fix things when they break. I build better ways to do the work. My background covers automation, infrastructure, app development, and integrations across multiple platforms. I stay focused on what’s useful to the team, and I build with long term reliability in mind. I’m not afraid to take ownership, and I know how to lead technical projects that make a real difference.</p>
-        </div>
-        <h4 class="section-title">ABOUT ME - PROFESSIONAL</h4>
-        <div class="about-section">
-          <p>I lead technical projects from start to finish. That includes building internal tools, automating workflows, handling system integrations, and managing infrastructure across cloud and on prem. I’ve been the go to person for our leadership team when something needs to change or improve. I work with every department and make sure the systems I build actually match how people work, day to day. My background covers a wide range of tools and platforms, and I’m always learning new ones to stay ahead of what’s needed.</p>
-        </div>
-        <h4 class="section-title">ABOUT ME - PERSONAL</h4>
-        <div class="about-section">
-          <p>I’m a husband and a dad before anything else. Most of my free time is spent with my family — exploring outside, camping, or just being together. I like hands-on projects and finding ways to make things work better. That usually means tinkering with 3D printing, automating something around the house, or working on a random side project just to see if I can. I’m always curious, always building, and always looking for ways to make life a little easier.</p>
-        </div>
+        <p>I bridge technology and operations to design and deliver solutions that make businesses run smoother. My background spans automation, infrastructure, app development and integrations across multiple platforms. I stay focused on what’s useful to the team, build with long‑term reliability in mind, and take ownership of cross‑functional initiatives that make a real difference.</p>
+        <h4 class="section-title">ABOUT ME – PROFESSIONAL</h4>
+        <p>I partner with leadership to plan and implement improvements across systems and teams. That includes building internal tools, automating processes, integrating platforms and managing infrastructure across cloud and on‑prem. I’m the go‑to person when something needs to change or improve. I work closely with every department to ensure the solutions I build actually match how people work.</p>
+        <h4 class="section-title">ABOUT ME – PERSONAL</h4>
+        <p>I’m a husband and a dad before anything else. Most of my free time is spent with my family – exploring outside, camping or just being together. I like hands‑on projects and finding ways to make things work better, from 3D printing parts to automating household tasks. I’m always curious, always building and always looking for ways to make life a little easier.</p>
         <h4 class="section-title">EXPERIENCE</h4>
-        <div class="mb-4">
-          <div class="job-title">Systems Administrator & Technical Project Lead</div>
-          <div class="job-meta">Matt’s Moving – Saint Paul, MN | July 2022 – Present</div>
+        <!-- Experience: Technical Operations & Implementation Lead -->
+        <div class="mb-3">
+          <p class="job-title">Technical Operations &amp; Implementation Lead</p>
+          <p class="job-meta">Matt’s Moving – Saint Paul, MN | July 2022 – Present</p>
           <ul>
-            <li>Sole technical owner across all IT systems, automations, infrastructure, cloud services, integrations, and internal tool development for a fast-paced mid-sized company</li>
-            <li>Managed Active Directory, Office 365, Windows/Linux environments, and enforced security and compliance policies through Microsoft Purview and Google Workspace Admin</li>
-            <li>Designed and deployed internal apps using AppSheet, FlutterFlow, and Firebase to streamline operations across sales, dispatch, HR, accounting, and fleet management</li>
-            <li>Created custom automation workflows in Zapier, Google Apps Script, and Power Automate that save over 100+ hours per month by eliminating manual entry and improving data sync between systems</li>
-            <li>Integrated key third-party platforms such as Stripe, QuickBooks, Supermove, and Google Maps APIs to unify CRM, billing, scheduling, and reporting systems</li>
-            <li>Acted as the primary point of contact for C-suite executives and department heads, translating business needs into technical solutions and managing project roadmaps</li>
-            <li>Oversaw the planning and rollout of cross-functional tech projects, managing timelines, scope, and adoption across non-technical teams</li>
-            <li>Wrote and maintained technical documentation, including standard operating procedures, training guides, and architecture diagrams</li>
-            <li>Supported staff onboarding, account provisioning, and troubleshooting across all company systems, ensuring minimal downtime and high user satisfaction</li>
-            <li>Provided in-house consultation on cloud strategy and data compliance, including selecting tools, reviewing vendor security, and implementing multi-cloud best practices</li>
+            <li>Oversee technical operations for 20 office staff and coordinate 100+ field workers across sales, dispatch, HR, accounting and fleet operations, aligning resources and resolving blockers to keep projects on track.</li>
+            <li>Manage IT systems and security (Active Directory, Office 365, Windows/Linux, Google Cloud) with 24/7 reliability and incident response.</li>
+            <li>Plan and deliver cross‑functional projects: run planning sessions, define scope and milestones, track progress, and lead adoption across departments.</li>
+            <li>Design and deploy internal apps (AppSheet, FlutterFlow, Firebase) and integrate third‑party platforms (Stripe, QuickBooks, Supermove, Google Maps) to unify CRM, billing, scheduling and reporting.</li>
+            <li>Create automation workflows (Zapier, Google Apps Script, Power Automate) saving over 100 hours per month by eliminating manual entry and improving data synchronization.</li>
+            <li>Serve as a single point of contact between business leaders and technical teams, translating requirements into roadmaps and facilitating change management.</li>
           </ul>
         </div>
-        <div class="mb-4">
-          <div class="job-title">Sales Director & Systems Strategist</div>
-          <div class="job-meta">Matt’s Moving – Saint Paul, MN | July 2019 – July 2022</div>
+        <!-- Experience: Sales Director & Systems Strategist -->
+        <div class="mb-3">
+          <p class="job-title">Sales Director &amp; Systems Strategist</p>
+          <p class="job-meta">Matt’s Moving – Saint Paul, MN | July 2019 – July 2022</p>
           <ul>
-            <li>Led the sales department while simultaneously building internal systems to manage lead tracking, job scheduling, and performance analytics</li>
-            <li>Built real-time dashboards and reporting systems using Google Sheets, Data Studio, and AppSheet</li>
-            <li>Initiated and oversaw the department’s CRM transitions, creating documentation and training to ensure successful adoption</li>
-            <li>Partnered with leadership to redesign workflows across sales, dispatch, and customer service for improved communication and reduced friction</li>
-            <li>Provided ongoing support and iterative updates to internal systems based on team feedback</li>
+            <li>Managed and mentored a five‑person sales team; set KPIs, coached weekly and conducted quality audits that improved close rates.</li>
+            <li>Served as interim customer‑service manager; stabilized operations and maintained service quality during leadership transition.</li>
+            <li>Project‑managed a company‑wide CRM migration: scoped requirements, coordinated with developers, created training materials and executed a rollout with zero downtime.</li>
+            <li>Delivered weekly performance reviews and executive reports linking sales metrics to actionable insights.</li>
+            <li>Collaborated with developers to test and refine new CRM features using real user feedback, ensuring the platform met business needs.</li>
           </ul>
         </div>
-        <div class="mb-4">
-          <div class="job-title">Administrative Specialist</div>
-          <div class="job-meta">United States Navy | 2012 – 2016</div>
+        <!-- Experience: Administrative Specialist (U.S. Navy) -->
+        <div class="mb-3">
+          <p class="job-title">Administrative Specialist (Petty Officer 3rd Class, E4)</p>
+          <p class="job-meta">United States Navy | 2012 – 2016</p>
           <ul>
-            <li>Managed highly sensitive and classified personnel files and administrative operations within secure, fast-paced environments</li>
-            <li>Maintained accurate reporting and communication with both leadership and enlisted personnel</li>
-            <li>Developed strong habits in structured execution, accountability, and supporting mission-critical logistics under pressure</li>
+            <li>Managed highly sensitive and classified personnel files and administrative operations within secure, fast‑paced environments.</li>
+            <li>Maintained accurate reporting and communication with both leadership and enlisted personnel.</li>
+            <li>Developed strong habits in structured execution, accountability and supporting mission‑critical logistics under pressure.</li>
           </ul>
         </div>
-      </main>
+      </div>
     </div>
   </div>
 </body>

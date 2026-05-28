@@ -1,0 +1,473 @@
+/* Shared resume styles for index.html (two-column) and resume-ats.html (single-column) */
+
+:root {
+  --accent: #4a6995;
+  --text: #222;
+  --muted: #6c757d;
+  --border: #e0e4ea;
+  --header-dark: #121722;
+  --font-sans: "Segoe UI", Calibri, Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f9fa;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: #3a5580;
+}
+
+p {
+  margin: 0 0 0.65rem;
+  orphans: 2;
+  widows: 2;
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.resume-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.layout-ats .resume-wrapper {
+  max-width: 8.5in;
+}
+
+/* Header, screen (branded) */
+.resume-header {
+  background: linear-gradient(90deg, var(--header-dark) 70%, var(--accent) 100%);
+  color: #fff;
+  padding: 2rem 2rem 1.35rem;
+}
+
+.resume-header h1 {
+  margin: 0 0 0.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.resume-header h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
+
+.resume-header .contact {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.resume-header .contact span {
+  display: inline-block;
+  margin-right: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.resume-header a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Two-column layout (index) */
+.layout-web .resume-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout-web .resume-sidebar {
+  flex: 0 0 270px;
+  max-width: 270px;
+  padding: 1.75rem 1.5rem 1.75rem 2rem;
+  background: #f4f6fa;
+  border-right: 1px solid var(--border);
+}
+
+.layout-web .resume-content {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 1.75rem 2.25rem 2rem;
+}
+
+/* Single-column layout (ATS) */
+.layout-ats .resume-main {
+  display: block;
+  padding: 1.5rem 2rem 2rem;
+}
+
+.layout-ats .resume-sidebar {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.layout-ats .resume-content {
+  padding: 0;
+}
+
+.layout-ats .resume-content > .section-title:first-child {
+  margin-top: 0;
+}
+
+/* Sections */
+.section-title {
+  color: var(--accent);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+  letter-spacing: 0.03em;
+  border-bottom: 1.5px solid var(--border);
+  padding-bottom: 0.15rem;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.resume-sidebar .section-title:first-child,
+.layout-ats .resume-main > .section-title:first-child {
+  margin-top: 0;
+}
+
+.skills-list {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  padding-left: 1.15rem;
+}
+
+.skills-list li {
+  margin-bottom: 0.35rem;
+}
+
+.contract-list {
+  margin-top: 0.35rem;
+}
+
+.resume-content li {
+  margin-bottom: 0.45rem;
+}
+
+.job-block {
+  margin-bottom: 1rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.job-title {
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.job-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0.15rem 0 0.2rem;
+}
+
+.job-scope {
+  color: #495057;
+  font-size: 0.92rem;
+  font-style: italic;
+  margin: 0 0 0.4rem;
+}
+
+.summary-personal {
+  font-size: 0.92rem;
+  color: #495057;
+  margin-bottom: 0;
+}
+
+.sidebar-note {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Print button + menu */
+.print-actions {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.print-btn {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.print-btn:hover {
+  background: #3a5580;
+}
+
+.print-menu {
+  margin-top: 0.5rem;
+  min-width: 17rem;
+  max-width: 20rem;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.print-menu[hidden] {
+  display: none;
+}
+
+.print-menu-title {
+  margin: 0.25rem 0.5rem 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.print-menu-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.35;
+  padding: 0.55rem 0.65rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text);
+}
+
+.print-menu-item:hover {
+  background: #f4f6fa;
+}
+
+.print-menu-item strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.print-menu-item span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .layout-web .resume-main {
+    flex-direction: column;
+  }
+
+  .layout-web .resume-sidebar {
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .layout-web .resume-content {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .print-actions {
+    position: static;
+    align-items: stretch;
+    width: 100%;
+    padding: 1rem;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .print-btn {
+    width: 100%;
+  }
+
+  .print-menu {
+    min-width: 100%;
+    max-width: none;
+  }
+}
+
+/* Print / PDF */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.6in;
+  }
+
+  .print-actions,
+  .print-menu {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 10.5pt;
+    line-height: 1.12;
+    color: #000;
+  }
+
+  .resume-wrapper {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  /* Flat header (works without Background graphics in print dialog) */
+  .resume-header {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 0 0 10pt !important;
+    border-bottom: 2pt solid var(--header-dark);
+    -webkit-print-color-adjust: economy;
+    print-color-adjust: economy;
+  }
+
+  .resume-header h1 {
+    font-size: 20pt;
+    color: var(--header-dark);
+  }
+
+  .resume-header h2 {
+    font-size: 12pt;
+    color: var(--accent);
+    opacity: 1;
+  }
+
+  .resume-header .contact {
+    font-size: 9.5pt;
+    margin-top: 6pt;
+  }
+
+  .resume-header a {
+    color: #1a4a7a !important;
+    text-decoration: underline !important;
+  }
+
+  .resume-main {
+    padding: 0 !important;
+  }
+
+  .layout-web .resume-main {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .layout-web .resume-sidebar {
+    flex: 0 0 2in;
+    max-width: 2in;
+    padding: 8pt 10pt 0 0 !important;
+    background: #fff !important;
+    border-right: 1pt solid #ccc;
+  }
+
+  .layout-web .resume-content {
+    flex: 1;
+    padding: 8pt 0 0 10pt !important;
+  }
+
+  .layout-ats .resume-main {
+    padding: 8pt 0 0 !important;
+  }
+
+  .section-title {
+    font-size: 11pt;
+    margin-top: 10pt;
+    margin-bottom: 4pt;
+    color: var(--header-dark);
+    border-bottom-color: #ccc;
+    break-after: avoid;
+  }
+
+  .job-title {
+    font-size: 10.5pt;
+  }
+
+  .job-meta,
+  .job-scope,
+  .summary-personal {
+    font-size: 9.5pt;
+  }
+
+  .skills-list,
+  .resume-content li {
+    font-size: 10pt;
+  }
+
+  .job-block {
+    break-inside: avoid;
+    margin-bottom: 8pt;
+  }
+
+  a {
+    color: #1a4a7a;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]:after,
+  a[href^="mailto"]:after {
+    content: none;
+  }
+
+  /* Optional: branded print — enable “Background graphics” in dialog */
+  body.print-branded .resume-header {
+    background: var(--header-dark) !important;
+    color: #fff !important;
+    border-bottom: none;
+    padding: 10pt 12pt !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body.print-branded .resume-header h1,
+  body.print-branded .resume-header h2 {
+    color: #fff !important;
+  }
+
+  body.print-branded .resume-header a {
+    color: #fff !important;
+  }
+}

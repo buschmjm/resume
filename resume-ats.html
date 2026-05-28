@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jacob Buschmann | Platform &amp; DevOps Engineer</title>
+  <title>Jacob Buschmann | Platform &amp; DevOps Engineer (ATS)</title>
   <link rel="stylesheet" href="resume.css">
 </head>
-<body class="layout-web">
+<body class="layout-ats">
   <div class="print-actions">
     <button
       type="button"
@@ -21,16 +21,16 @@
     <div class="print-menu" id="print-menu" hidden role="menu" aria-labelledby="print-menu-toggle">
       <p class="print-menu-title">Save as PDF</p>
       <button type="button" class="print-menu-item" role="menuitem" data-print-action="flat">
-        <strong>Two-column (flat header)</strong>
-        <span>Default for email and networking. Background graphics off is fine.</span>
+        <strong>Single-column (flat header)</strong>
+        <span>Default for ATS uploads. Background graphics off is fine.</span>
       </button>
       <button type="button" class="print-menu-item" role="menuitem" data-print-action="branded">
-        <strong>Two-column (dark header)</strong>
+        <strong>Single-column (dark header)</strong>
         <span>Turn on Background graphics in the print dialog.</span>
       </button>
       <button type="button" class="print-menu-item" role="menuitem" data-print-action="other-layout">
-        <strong>ATS single-column</strong>
-        <span>Workday, Taleo, iCIMS, and similar portals.</span>
+        <strong>Two-column version</strong>
+        <span>Networking and email; opens the main resume layout.</span>
       </button>
     </div>
   </div>
@@ -47,31 +47,7 @@
         <span><strong>Projects:</strong> <a href="https://willowriverautomation.com">willowriverautomation.com</a></span>
       </div>
     </header>
-    <div class="resume-main">
-      <aside class="resume-sidebar">
-        <h4 class="section-title">Skills</h4>
-        <ul class="skills-list">
-          <li><strong>Platform &amp; CI/CD:</strong> Kubernetes, Azure DevOps (ADO), CI/CD (web, mobile, Cloud Build)</li>
-          <li><strong>IaC &amp; automation:</strong> Infrastructure as Code (IaC), Terraform (GCP), Ansible, Semaphore, Windmill, GitHub Actions, MinIO, OpenBao</li>
-          <li><strong>Cloud:</strong> GCP (Cloud Run, Cloud SQL, Terraform, Cloud Build, GCS), Netlify, Azure, Firebase, AWS</li>
-          <li><strong>Data, APIs &amp; observability:</strong> PostgreSQL, Stripe, OpenAPI, PostHog, SendGrid, Grafana</li>
-          <li><strong>Infrastructure:</strong> Linux, Proxmox, VMware, LDAP, Active Directory, Office 365 administration, Google Workspace</li>
-          <li><strong>Development:</strong> Python, Flask, Vue, Docker, Tkinter, JavaScript, Node.js, Git, PowerShell; AppSheet, Zapier, FlutterFlow</li>
-          <li><strong>AI tooling:</strong> Cursor, GitHub Copilot, Open WebUI, Ollama, LLM APIs</li>
-        </ul>
-        <h4 class="section-title">Contract Work &amp; Projects</h4>
-        <p class="sidebar-note">Products and work samples at <a href="https://willowriverautomation.com">willowriverautomation.com</a>.</p>
-        <ul class="skills-list contract-list">
-          <li>MoveAnchor is a multi-tenant CRM for moving companies (pipeline, dispatch, warehouse, invoicing) in private alpha. I run the API and UI on Cloud Run, Postgres on Cloud SQL, and deploy with Terraform and Cloud Build, with Cloud Tasks and Scheduler for background jobs.</li>
-          <li>Intake Relay is a headless intake API for SaaS onboarding: versioned flows, embed SDK, and webhooks with retries and HMAC signing. It runs on GCP (Cloud Run, Cloud SQL, GCS, Stripe, Terraform, Cloud Build). The marketing site reaches it through a Netlify /relay proxy.</li>
-          <li>I run willowriverautomation.com on Vue 3 and Netlify: product pages, PostHog, Intake Relay signup, and a contact form into Intake Relay, SendGrid, and Slack.</li>
-          <li>On contract work I use Cursor, Copilot, and Open WebUI (local Ollama plus API models) for specs and doc search. I still review anything that ships to users.</li>
-        </ul>
-        <h4 class="section-title">Education</h4>
-        <p>Technical Diploma, IT, Software Development Specialist<br>
-        Chippewa Valley Technical College, Eau Claire, WI</p>
-        <p>Coursework: Systems Analysis, Software Design, JavaScript, Python, Database Design, Web Development, Cloud Fundamentals</p>
-      </aside>
+    <main class="resume-main">
       <div class="resume-content">
         <h4 class="section-title">Professional Summary</h4>
         <p>Platform and DevOps engineer with six years on internal platforms, CI/CD pipelines, and hybrid infrastructure. At Patron Points I help deliver a self-service internal release platform for hundreds of white-label mobile apps (Kubernetes, Flask control plane with 20+ documented endpoints) and work with the team on ops across Proxmox, VMware, and Azure, GCP, and Firebase. MoveAnchor and Intake Relay also run in production on GCP under <a href="https://willowriverautomation.com">Willow River Automation</a>.</p>
@@ -118,8 +94,30 @@
             <li>Kept reporting accurate for leadership and supported mission-critical logistics under deadline pressure.</li>
           </ul>
         </div>
+        <h4 class="section-title">Skills</h4>
+        <ul class="skills-list">
+          <li><strong>Platform &amp; CI/CD:</strong> Kubernetes, Azure DevOps (ADO), CI/CD (web, mobile, Cloud Build)</li>
+          <li><strong>IaC &amp; automation:</strong> Infrastructure as Code (IaC), Terraform (GCP), Ansible, Semaphore, Windmill, GitHub Actions, MinIO, OpenBao</li>
+          <li><strong>Cloud:</strong> GCP (Cloud Run, Cloud SQL, Terraform, Cloud Build, GCS), Netlify, Azure, Firebase, AWS</li>
+          <li><strong>Data, APIs &amp; observability:</strong> PostgreSQL, Stripe, OpenAPI, PostHog, SendGrid, Grafana</li>
+          <li><strong>Infrastructure:</strong> Linux, Proxmox, VMware, LDAP, Active Directory, Office 365 administration, Google Workspace</li>
+          <li><strong>Development:</strong> Python, Flask, Vue, Docker, Tkinter, JavaScript, Node.js, Git, PowerShell; AppSheet, Zapier, FlutterFlow</li>
+          <li><strong>AI tooling:</strong> Cursor, GitHub Copilot, Open WebUI, Ollama, LLM APIs</li>
+        </ul>
+        <h4 class="section-title">Contract Work &amp; Projects</h4>
+        <p>Products and work samples at <a href="https://willowriverautomation.com">willowriverautomation.com</a>.</p>
+        <ul>
+          <li>MoveAnchor is a multi-tenant CRM for moving companies (pipeline, dispatch, warehouse, invoicing) in private alpha. I run the API and UI on Cloud Run, Postgres on Cloud SQL, and deploy with Terraform and Cloud Build, with Cloud Tasks and Scheduler for background jobs.</li>
+          <li>Intake Relay is a headless intake API for SaaS onboarding: versioned flows, embed SDK, and webhooks with retries and HMAC signing. It runs on GCP (Cloud Run, Cloud SQL, GCS, Stripe, Terraform, Cloud Build). The marketing site reaches it through a Netlify /relay proxy.</li>
+          <li>I run willowriverautomation.com on Vue 3 and Netlify: product pages, PostHog, Intake Relay signup, and a contact form into Intake Relay, SendGrid, and Slack.</li>
+          <li>On contract work I use Cursor, Copilot, and Open WebUI (local Ollama plus API models) for specs and doc search. I still review anything that ships to users.</li>
+        </ul>
+        <h4 class="section-title">Education</h4>
+        <p>Technical Diploma, IT, Software Development Specialist<br>
+        Chippewa Valley Technical College, Eau Claire, WI</p>
+        <p>Coursework: Systems Analysis, Software Design, JavaScript, Python, Database Design, Web Development, Cloud Fundamentals</p>
       </div>
-    </div>
+    </main>
   </div>
   <script src="print.js"></script>
 </body>

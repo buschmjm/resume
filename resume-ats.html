@@ -3,41 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jacob Buschmann | Platform &amp; DevOps Engineer (ATS)</title>
+  <title>Jacob Buschmann | Infrastructure Engineer | Platform, DevOps &amp; Technical Operations</title>
   <link rel="stylesheet" href="resume.css">
 </head>
 <body class="layout-ats">
   <div class="print-actions">
-    <button
-      type="button"
-      class="print-btn"
-      id="print-menu-toggle"
-      aria-expanded="false"
-      aria-haspopup="true"
-      aria-controls="print-menu"
-    >
-      Print
-    </button>
+    <button type="button" class="print-btn" id="print-menu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="print-menu">Print</button>
     <div class="print-menu" id="print-menu" hidden role="menu" aria-labelledby="print-menu-toggle">
       <p class="print-menu-title">Save as PDF</p>
-      <button type="button" class="print-menu-item" role="menuitem" data-print-action="flat">
-        <strong>Single-column (flat header)</strong>
-        <span>Default for ATS uploads. Background graphics off is fine.</span>
-      </button>
-      <button type="button" class="print-menu-item" role="menuitem" data-print-action="branded">
-        <strong>Single-column (dark header)</strong>
-        <span>Turn on Background graphics in the print dialog.</span>
-      </button>
-      <button type="button" class="print-menu-item" role="menuitem" data-print-action="other-layout">
-        <strong>Two-column version</strong>
-        <span>Networking and email; opens the main resume layout.</span>
-      </button>
+      <button type="button" class="print-menu-item" role="menuitem" data-print-action="flat"><strong>Single-column (flat header)</strong><span>Default for ATS uploads. Background graphics off is fine.</span></button>
+      <button type="button" class="print-menu-item" role="menuitem" data-print-action="branded"><strong>Single-column (dark header)</strong><span>Turn on Background graphics in the print dialog.</span></button>
+      <button type="button" class="print-menu-item" role="menuitem" data-print-action="other-layout"><strong>Two-column version</strong><span>Networking and email; opens the main resume layout.</span></button>
     </div>
   </div>
   <div class="resume-wrapper">
     <header class="resume-header">
       <h1>Jacob Buschmann</h1>
-      <h2>Platform &amp; DevOps Engineer</h2>
+      <h2>Infrastructure Engineer</h2>
+      <p>Platform, DevOps &amp; Technical Operations</p>
       <div class="contact">
         <span><strong>Phone:</strong> 760-718-9504</span>
         <span><strong>Email:</strong> <a href="mailto:buschmann.jake@gmail.com">buschmann.jake@gmail.com</a></span>
@@ -45,76 +28,89 @@
         <span><strong>GitHub:</strong> <a href="https://github.com/buschmjm">github.com/buschmjm</a></span>
         <span><strong>Resume:</strong> <a href="https://buschmjm.github.io/resume/">buschmjm.github.io/resume/</a></span>
         <span><strong>Projects:</strong> <a href="https://willowriverautomation.com">willowriverautomation.com</a></span>
+        <span><strong>Homelab / Infra Portfolio:</strong> <a href="https://jbuschmann.com">jbuschmann.com</a></span>
       </div>
     </header>
     <main class="resume-main">
       <div class="resume-content">
         <h4 class="section-title">Professional Summary</h4>
-        <p>Platform and DevOps engineer with six years on internal platforms, CI/CD pipelines, and hybrid infrastructure. At Patron Points I help deliver a self-service internal release platform for hundreds of white-label mobile apps (Kubernetes, Flask control plane with 20+ documented endpoints) and work with the team on ops across Proxmox, VMware, and Azure, GCP, and Firebase. MoveAnchor and Intake Relay also run in production on GCP under <a href="https://willowriverautomation.com">Willow River Automation</a>.</p>
-        <p class="summary-personal">Outside work, I am a husband and dad. I keep a homelab in a server cabinet with K3s, a Postgres box, game servers, and whatever I am debugging this week.</p>
+        <p>Infrastructure engineer focused on platform engineering, DevOps, automation, and hybrid infrastructure. I build and operate systems across Kubernetes, cloud and self-hosted environments, CI/CD, networking, observability, identity, and backend services. I enjoy taking complicated problems with no obvious solution, breaking them down, and turning them into reliable automated systems.</p>
+        <p>I have experience owning systems end to end, designing internal platforms, building APIs and integrations, automating business and infrastructure processes, and managing cloud and on-premises environments. I am comfortable working independently, learning unfamiliar technologies when needed, and working across infrastructure and software to solve the underlying problem.</p>
         <h4 class="section-title">Experience</h4>
         <div class="job-block">
-          <p class="job-title">Technical Operations &amp; Infrastructure Lead</p>
+          <p class="job-title">Infrastructure Engineer</p>
+          <p class="job-subtitle">Platform, DevOps &amp; Technical Operations</p>
           <p class="job-meta">Patron Points Inc, Woodbury, MN | October 2025 to Present</p>
-          <p class="job-scope">Internal release platform, hybrid infrastructure, and internal tools for a multi-tenant mobile app fleet used by engineering and ops.</p>
+          <p class="job-scope">Platform engineering, hybrid infrastructure, CI/CD, automation, and internal tools for a multi-tenant mobile application platform.</p>
           <ul>
-            <li>Delivered a company-wide self-service internal platform and CI/CD pipeline for hundreds of templated apps. Learned Ansible and Semaphore on the job while wiring Firebase, PostgreSQL registries, and Azure DevOps (ADO) builds with auto-renewed credentials.</li>
-            <li>Rebuilt delivery as a Flask API on Kubernetes (20+ documented endpoints), moved artifacts to MinIO, and ran Android builds on-cluster in Docker so Mac minis only compile iOS.</li>
-            <li>Redeployed Grafana with monitoring and alerts so ops could see on-prem hosts and cloud services in one place instead of chasing logs ad hoc.</li>
-            <li>Built a Python/Tkinter batch tool with LDAP-gated APIs on Kubernetes to render tens of thousands of marketing images from spreadsheets. Turned a month-long team effort into a same-day self-service run.</li>
-            <li>Deployed PiSignage on Raspberry Pi fleets with scheduled power, marketing playlists, and Grafana dashboards for the ops team.</li>
-            <li>Worked on a team managing Proxmox, VMware, Linux, and Kubernetes on-prem plus Azure, GCP, and Firebase for the mobile platform, signage, and internal tools.</li>
+            <li>Designed and delivered a self-service internal release platform and CI/CD workflow supporting hundreds of white-label mobile applications used by engineering and operations teams.</li>
+            <li>Built and maintained a Flask control plane running on Kubernetes with more than 20 documented API endpoints, connecting application configuration, PostgreSQL registries, Firebase, Azure DevOps, credentials, and build processes.</li>
+            <li>Reworked application delivery around Kubernetes and Docker, including Android builds running on cluster infrastructure while retaining Mac minis for iOS compilation.</li>
+            <li>Manage and support infrastructure across Kubernetes, Proxmox, VMware, Linux, Azure, GCP, and Firebase in on-premises and cloud environments.</li>
+            <li>Built a Python application backed by Kubernetes workloads and authenticated APIs to generate tens of thousands of marketing assets from spreadsheet data, reducing a month-long manual process to same-day execution.</li>
+            <li>Built and maintained CI/CD workflows using Azure DevOps, GitHub, and cloud build systems for application and infrastructure delivery.</li>
+            <li>Improved infrastructure visibility by deploying and configuring Grafana monitoring, dashboards, and alerts across on-premises hosts and cloud services.</li>
+            <li>Work across networking, identity, authentication, secrets, storage, APIs, databases, and application infrastructure when solving operational problems.</li>
           </ul>
         </div>
         <div class="job-block">
-          <p class="job-title">Technical Operations &amp; Implementation Lead</p>
+          <p class="job-title">Systems Administrator &amp; Business Project Manager</p>
           <p class="job-meta">Matt's Moving, Saint Paul, MN | July 2022 to October 2025</p>
           <ul>
-            <li>Ran IT for 20 office staff and 100+ field workers across sales, dispatch, HR, accounting, and fleet.</li>
-            <li>Managed Active Directory, Office 365, Windows/Linux, and Google Cloud with on-call incident response.</li>
-            <li>Built internal apps (AppSheet, FlutterFlow, Firebase) and connected Stripe, QuickBooks, Supermove, and Google Maps so CRM, billing, and scheduling shared one stack.</li>
-            <li>Automated workflows in Zapier, Google Apps Script, and Power Automate, saving 100+ hours per month on manual data entry.</li>
+            <li>Managed Windows and Linux systems, Active Directory, Microsoft 365, Google Workspace, cloud services, user access, endpoint support, and operational technology for approximately 20 office employees and more than 100 field workers.</li>
+            <li>Designed and automated business workflows using Zapier, Google Apps Script, Power Automate, APIs, webhooks, and database integrations, eliminating more than 100 hours of manual work each month.</li>
+            <li>Built and maintained integrations between Supermove, Stripe, QuickBooks, Google Maps, Google Workspace, and internal applications.</li>
+            <li>Built internal applications and tools using AppSheet, FlutterFlow, Firebase, JavaScript, and Python to solve operational problems and improve access to business data.</li>
+            <li>Led business systems projects from requirements gathering through implementation, testing, training, and rollout, working directly with leadership, employees, and external developers.</li>
+            <li>Served as the technical owner for business applications and integrations, troubleshooting issues across infrastructure, software, APIs, data, and user workflows.</li>
           </ul>
         </div>
         <div class="job-block">
-          <p class="job-title">Sales Director &amp; Systems Strategist</p>
-          <p class="job-meta">Matt's Moving, Saint Paul, MN | July 2019 to July 2022</p>
-          <p class="job-scope">Earlier role before moving into technical operations.</p>
+          <p class="job-title">Sales Director</p>
+          <p class="job-meta">Matt's Moving, Saint Paul, MN | July 2020 to July 2022</p>
           <ul>
-            <li>Project-managed a company-wide CRM migration with scoped requirements, developer coordination, training, and a zero-downtime rollout.</li>
-            <li>Tested new CRM features with developers using feedback from the sales floor.</li>
+            <li>Managed sales operations, team performance, reporting, process improvement, and day-to-day business systems.</li>
+            <li>Led a company-wide CRM migration, gathering requirements, coordinating with developers, testing functionality, training users, and managing the rollout.</li>
+            <li>Worked directly with developers to translate operational problems into technical requirements and validate solutions with end users.</li>
           </ul>
         </div>
         <div class="job-block">
-          <p class="job-title">Administrative Specialist (Petty Officer 3rd Class, E4)</p>
+          <p class="job-title">Sales Team Member &amp; Helpdesk Support</p>
+          <p class="job-meta">Matt's Moving, Saint Paul, MN | July 2019 to July 2020</p>
+          <ul>
+            <li>Supported sales operations and customers while providing first-line technical support for employees and business systems.</li>
+            <li>Troubleshot hardware, software, account, and workflow issues and helped identify recurring problems that could be addressed through better systems and automation.</li>
+          </ul>
+        </div>
+        <div class="job-block">
+          <p class="job-title">Administrative Specialist, Petty Officer 3rd Class</p>
           <p class="job-meta">United States Navy | 2012 to 2016</p>
           <ul>
-            <li>Managed classified personnel records and admin operations in secure, high-tempo environments.</li>
-            <li>Held a Top Secret clearance during service.</li>
-            <li>Kept reporting accurate for leadership and supported mission-critical logistics under deadline pressure.</li>
+            <li>Managed sensitive personnel records and administrative operations in secure, high-tempo environments.</li>
+            <li>Held a Top Secret security clearance during service.</li>
+            <li>Maintained accurate reporting and documentation for leadership while supporting mission-critical logistics.</li>
           </ul>
         </div>
-        <h4 class="section-title">Skills</h4>
+        <h4 class="section-title">Core Technologies</h4>
         <ul class="skills-list">
-          <li><strong>Platform &amp; CI/CD:</strong> Kubernetes, Azure DevOps (ADO), CI/CD (web, mobile, Cloud Build)</li>
-          <li><strong>IaC &amp; automation:</strong> Infrastructure as Code (IaC), Terraform (GCP), Ansible, Semaphore, Windmill, GitHub Actions, MinIO, OpenBao</li>
-          <li><strong>Cloud:</strong> GCP (Cloud Run, Cloud SQL, Terraform, Cloud Build, GCS), Netlify, Azure, Firebase, AWS</li>
-          <li><strong>Data, APIs &amp; observability:</strong> PostgreSQL, Stripe, OpenAPI, PostHog, SendGrid, Grafana</li>
-          <li><strong>Infrastructure:</strong> Linux, Proxmox, VMware, LDAP, Active Directory, Office 365 administration, Google Workspace</li>
-          <li><strong>Development:</strong> Python, Flask, Vue, Docker, Tkinter, JavaScript, Node.js, Git, PowerShell; AppSheet, Zapier, FlutterFlow</li>
-          <li><strong>AI tooling:</strong> Cursor, GitHub Copilot, Open WebUI, Ollama, LLM APIs</li>
+          <li><strong>Platform &amp; infrastructure:</strong> Kubernetes, Docker, Proxmox, VMware, Linux, Windows Server, FluxCD</li>
+          <li><strong>IaC &amp; automation:</strong> Terraform, Ansible, Semaphore, n8n, GitHub Actions, Infrastructure as Code</li>
+          <li><strong>Cloud &amp; CI/CD:</strong> GCP, Azure, Azure DevOps, Cloud Build, Firebase, CI/CD</li>
+          <li><strong>Networking &amp; identity:</strong> FortiGate, network tunnels, LDAP, Active Directory, Microsoft 365, Keycloak</li>
+          <li><strong>Data &amp; observability:</strong> PostgreSQL, Grafana, Prometheus, OpenTelemetry, Jaeger, OpenSearch, MinIO</li>
+          <li><strong>Development &amp; APIs:</strong> Python, Flask, JavaScript, Node.js, REST APIs, OpenAPI, webhooks, PowerShell, Git</li>
+          <li><strong>AI &amp; developer tooling:</strong> Ollama, Open WebUI, OpenHands, RAG, MCP, AI agents, Cursor, GitHub Copilot</li>
         </ul>
-        <h4 class="section-title">Contract Work &amp; Projects</h4>
+        <h4 class="section-title">Selected Projects</h4>
         <p>Products and work samples at <a href="https://willowriverautomation.com">willowriverautomation.com</a>.</p>
         <ul>
-          <li>MoveAnchor is a multi-tenant CRM for moving companies (pipeline, dispatch, warehouse, invoicing) in private alpha. I run the API and UI on Cloud Run, Postgres on Cloud SQL, and deploy with Terraform and Cloud Build, with Cloud Tasks and Scheduler for background jobs.</li>
-          <li>Intake Relay is a headless intake API for SaaS onboarding: versioned flows, embed SDK, and webhooks with retries and HMAC signing. It runs on GCP (Cloud Run, Cloud SQL, GCS, Stripe, Terraform, Cloud Build). The marketing site reaches it through a Netlify /relay proxy.</li>
-          <li>I run willowriverautomation.com on Vue 3 and Netlify: product pages, PostHog, Intake Relay signup, and a contact form into Intake Relay, SendGrid, and Slack.</li>
-          <li>On contract work I use Cursor, Copilot, and Open WebUI (local Ollama plus API models) for specs and doc search. I still review anything that ships to users.</li>
+          <li><strong>MoveAnchor:</strong> Multi-tenant CRM running on GCP with Cloud Run, Cloud SQL, PostgreSQL, Terraform, Cloud Build, Cloud Tasks, and Scheduler.</li>
+          <li><strong>Intake Relay:</strong> Headless SaaS intake API with versioned flows, embedded SDK, webhooks, retries, HMAC signing, Stripe, and GCP infrastructure.</li>
+          <li><strong>Self-hosted infrastructure:</strong> K3s, Proxmox, PostgreSQL, Forgejo, monitoring, networking, storage, and automated application deployment.</li>
+          <li><strong>AI infrastructure:</strong> Local models, Open WebUI, OpenHands, RAG systems, n8n agents, MCP servers, and agentic development tooling.</li>
         </ul>
         <h4 class="section-title">Education</h4>
-        <p>Technical Diploma, IT, Software Development Specialist<br>
-        Chippewa Valley Technical College, Eau Claire, WI</p>
+        <p>Technical Diploma, IT, Software Development Specialist<br>Chippewa Valley Technical College, Eau Claire, WI</p>
         <p>Coursework: Systems Analysis, Software Design, JavaScript, Python, Database Design, Web Development, Cloud Fundamentals</p>
       </div>
     </main>

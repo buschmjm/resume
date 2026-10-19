@@ -33,7 +33,7 @@
         <h4 class="section-title">Core Skills</h4>
         <ul class="skills-list">
           <li><strong>Platform:</strong> Kubernetes, Helm, FluxCD, GitOps, Docker, Harbor, kaniko, Traefik, MinIO, Proxmox, VMware, Linux</li>
-          <li><strong>CI/CD &amp; IaC:</strong> GitHub Actions, Azure DevOps, Ansible, Infrastructure as Code</li>
+          <li><strong>CI/CD &amp; IaC:</strong> GitHub Actions, Azure DevOps, Terraform, Ansible, Infrastructure as Code</li>
           <li><strong>Cloud:</strong> GCP, Azure, Firebase, hybrid on-prem</li>
           <li><strong>Reliability &amp; Observability:</strong> Grafana, Prometheus, OpenTelemetry, OpenSearch, GoAlert on-call, incident response, HPA and autoscaling tuning</li>
           <li><strong>Identity, Security &amp; Compliance:</strong> Keycloak, OIDC, OpenBao, Vaultwarden, Active Directory, Entra ID, LDAP, Microsoft 365, SOC 2 controls, FortiGate</li>
@@ -61,7 +61,8 @@
           <p class="job-meta">Patron Points Inc, Woodbury, MN | October 2025 to Present</p>
           <p class="job-scope">Own the platform and release infrastructure behind hundreds of production white-label iOS and Android apps: Kubernetes with FluxCD (GitOps) and Helm across on-prem, Azure, GCP, and Firebase. Final escalation for production incidents and on-call owner; work daily with engineering, operations, and business teams.</p>
           <ul>
-            <li>Leading the company-wide CI/CD migration from Azure DevOps to GitHub Actions: scoped the cutover, rebuilt the runner infrastructure, designed the target workflow pattern, migrated the first pipeline end to end as the reference implementation, and wrote the SOP the development teams now use to migrate the remaining repositories. No production release has broken.</li>
+            <li>Use Terraform and Ansible for infrastructure as code and configuration automation as part of the company's platform infrastructure work.</li>
+          <li>Leading the company-wide CI/CD migration from Azure DevOps to GitHub Actions: scoped the cutover, rebuilt the runner infrastructure, designed the target workflow pattern, migrated the first pipeline end to end as the reference implementation, and wrote the SOP the development teams now use to migrate the remaining repositories. No production release has broken.</li>
             <li>Built the self-service deployment platform engineering and operations use every day. Register a repo and it gets cloned, gated with lint, test, and security checks, built with kaniko, pushed to Harbor, and deployed behind Keycloak SSO. No manual steps anywhere in the path.</li>
             <li>Rebuilt the mobile build platform from the ground up as modular Python services (iOS signing, Azure DevOps, PostgreSQL, MinIO, Firebase) behind one orchestrator API, replacing a half-finished Ansible project, then hardened the Apple credential flows that kept breaking. New client apps build in four to six minutes; 1,648 rebuilds since the redesigned API went live, with ten or more on busy days.</li>
             <li>Run the company identity and secrets stack end to end: Keycloak SSO in dev and prod with OIDC integrations, a Vaultwarden rollout with 2FA, and OpenBao secrets behind the build services.</li>

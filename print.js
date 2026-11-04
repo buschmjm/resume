@@ -1,14 +1,13 @@
 (function () {
+  var PAGES = {
+    devops: "index.html",
+    ai: "ai-engineering.html"
+  };
   var menu;
   var toggle;
-  var branded = false;
 
-  function isAtsPage() {
-    return document.body.classList.contains("layout-ats");
-  }
-
-  function otherPageUrl() {
-    return isAtsPage() ? "index.html" : "resume-ats.html";
+  function currentResume() {
+    return document.body.getAttribute("data-resume");
   }
 
   function closeMenu() {
@@ -28,26 +27,13 @@
     else closeMenu();
   }
 
-  function runPrint(withBranded) {
+  function download(target) {
     closeMenu();
-    branded = !!withBranded;
-    document.body.classList.toggle("print-branded", branded);
-    window.print();
-  }
-
-  function handleAction(action) {
-    switch (action) {
-      case "flat":
-        runPrint(false);
-        break;
-      case "branded":
-        runPrint(true);
-        break;
-      case "other-layout":
-        window.location.href = otherPageUrl() + "?openPrint=1";
-        break;
-      default:
-        break;
+    if (target === currentResume()) {
+      window.print();
+    } else if (PAGES[target]) {
+      // Open the other resume and go straight to its print dialog.
+      window.location.href = PAGES[target] + "?print=1";
     }
   }
 
@@ -62,12 +48,28 @@
   }
 
   function bindMenuItems() {
-    var items = menu.querySelectorAll("[data-print-action]");
+    var items = menu.querySelectorAll("[data-download]");
     for (var i = 0; i < items.length; i++) {
       items[i].addEventListener("click", function () {
-        handleAction(this.getAttribute("data-print-action"));
+        download(this.getAttribute("data-download"));
       });
     }
+  }
+
+  function autoPrintIfRequested() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("print") !== "1") return;
+    if (window.history.replaceState) {
+      var url = new URL(window.location.href);
+      url.searchParams.delete("print");
+      window.history.replaceState({}, "", url.pathname + url.hash);
+    }
+    var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+    ready.then(function () {
+      window.setTimeout(function () {
+        window.print();
+      }, 150);
+    });
   }
 
   function init() {
@@ -83,24 +85,7 @@
     bindMenuItems();
     document.addEventListener("click", onDocumentClick);
     document.addEventListener("keydown", onKeydown);
-
-    window.addEventListener(
-      "afterprint",
-      function () {
-        document.body.classList.remove("print-branded");
-        branded = false;
-      },
-      { once: false }
-    );
-
-    if (new URLSearchParams(window.location.search).get("openPrint") === "1") {
-      openMenu();
-      if (window.history.replaceState) {
-        var url = new URL(window.location.href);
-        url.searchParams.delete("openPrint");
-        window.history.replaceState({}, "", url.pathname + url.hash);
-      }
-    }
+    autoPrintIfRequested();
   }
 
   if (document.readyState === "loading") {

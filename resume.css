@@ -1,4 +1,4 @@
-/* Shared resume styles for index.html (two-column) and resume-ats.html (single-column) */
+/* Shared styles for the two single-column ATS resumes: index.html (DevOps) and ai-engineering.html */
 
 :root {
   --accent: #4a6995;
@@ -44,7 +44,7 @@ ul {
 }
 
 .resume-wrapper {
-  max-width: 900px;
+  max-width: 8.5in;
   margin: 2rem auto;
   background: #fff;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
@@ -52,11 +52,7 @@ ul {
   overflow: hidden;
 }
 
-.layout-ats .resume-wrapper {
-  max-width: 8.5in;
-}
-
-/* Header, screen (branded) */
+/* Header (screen) */
 .resume-header {
   background: linear-gradient(90deg, var(--header-dark) 70%, var(--accent) 100%);
   color: #fff;
@@ -95,44 +91,9 @@ ul {
   text-decoration: underline;
 }
 
-/* Two-column layout (index) */
-.layout-web .resume-main {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.layout-web .resume-sidebar {
-  flex: 0 0 270px;
-  max-width: 270px;
-  padding: 1.75rem 1.5rem 1.75rem 2rem;
-  background: #f4f6fa;
-  border-right: 1px solid var(--border);
-}
-
-.layout-web .resume-content {
-  flex: 1 1 0;
-  min-width: 0;
-  padding: 1.75rem 2.25rem 2rem;
-}
-
-/* Single-column layout (ATS) */
-.layout-ats .resume-main {
-  display: block;
+/* Single column body */
+.resume-content {
   padding: 1.5rem 2rem 2rem;
-}
-
-.layout-ats .resume-sidebar {
-  padding: 0;
-  background: transparent;
-  border: none;
-}
-
-.layout-ats .resume-content {
-  padding: 0;
-}
-
-.layout-ats .resume-content > .section-title:first-child {
-  margin-top: 0;
 }
 
 /* Sections */
@@ -148,8 +109,7 @@ ul {
   page-break-after: avoid;
 }
 
-.resume-sidebar .section-title:first-child,
-.layout-ats .resume-main > .section-title:first-child {
+.resume-content > .section-title:first-child {
   margin-top: 0;
 }
 
@@ -163,18 +123,26 @@ ul {
   margin-bottom: 0.35rem;
 }
 
-.contract-list {
-  margin-top: 0.35rem;
-}
-
 .resume-content li {
   margin-bottom: 0.45rem;
 }
 
+/* Long jobs may split across pages; single bullets and short blocks stay whole */
 .job-block {
   margin-bottom: 1rem;
+}
+
+.job-block li,
+.job-block p {
   break-inside: avoid;
   page-break-inside: avoid;
+}
+
+.job-title,
+.job-meta,
+.job-scope {
+  break-after: avoid;
+  page-break-after: avoid;
 }
 
 .job-title {
@@ -196,18 +164,7 @@ ul {
   margin: 0 0 0.4rem;
 }
 
-.summary-personal {
-  font-size: 0.92rem;
-  color: #495057;
-  margin-bottom: 0;
-}
-
-.sidebar-note {
-  font-size: 0.95rem;
-  margin: 0;
-}
-
-/* Print button + menu */
+/* Download button + menu */
 .print-actions {
   position: fixed;
   top: 1.25rem;
@@ -292,18 +249,7 @@ ul {
 }
 
 @media (max-width: 900px) {
-  .layout-web .resume-main {
-    flex-direction: column;
-  }
-
-  .layout-web .resume-sidebar {
-    max-width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    padding: 1.25rem 1.5rem;
-  }
-
-  .layout-web .resume-content {
+  .resume-content {
     padding: 1.25rem 1.5rem 1.5rem;
   }
 
@@ -326,7 +272,7 @@ ul {
   }
 }
 
-/* Print / PDF */
+/* Print / PDF: flat header, no background graphics needed */
 @media print {
   @page {
     size: letter;
@@ -356,7 +302,6 @@ ul {
     overflow: visible;
   }
 
-  /* Flat header (works without Background graphics in print dialog) */
   .resume-header {
     background: #fff !important;
     color: #000 !important;
@@ -387,29 +332,7 @@ ul {
     text-decoration: underline !important;
   }
 
-  .resume-main {
-    padding: 0 !important;
-  }
-
-  .layout-web .resume-main {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .layout-web .resume-sidebar {
-    flex: 0 0 2in;
-    max-width: 2in;
-    padding: 8pt 10pt 0 0 !important;
-    background: #fff !important;
-    border-right: 1pt solid #ccc;
-  }
-
-  .layout-web .resume-content {
-    flex: 1;
-    padding: 8pt 0 0 10pt !important;
-  }
-
-  .layout-ats .resume-main {
+  .resume-content {
     padding: 8pt 0 0 !important;
   }
 
@@ -427,8 +350,7 @@ ul {
   }
 
   .job-meta,
-  .job-scope,
-  .summary-personal {
+  .job-scope {
     font-size: 9.5pt;
   }
 
@@ -438,7 +360,6 @@ ul {
   }
 
   .job-block {
-    break-inside: avoid;
     margin-bottom: 8pt;
   }
 
@@ -450,24 +371,5 @@ ul {
   a[href^="http"]:after,
   a[href^="mailto"]:after {
     content: none;
-  }
-
-  /* Optional: branded print — enable “Background graphics” in dialog */
-  body.print-branded .resume-header {
-    background: var(--header-dark) !important;
-    color: #fff !important;
-    border-bottom: none;
-    padding: 10pt 12pt !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  body.print-branded .resume-header h1,
-  body.print-branded .resume-header h2 {
-    color: #fff !important;
-  }
-
-  body.print-branded .resume-header a {
-    color: #fff !important;
   }
 }

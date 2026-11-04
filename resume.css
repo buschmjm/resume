@@ -249,8 +249,26 @@ ul {
 }
 
 @media (max-width: 900px) {
+  /* Keep the card off the screen edges and line the header up with the body text */
+  .resume-wrapper {
+    margin: 1rem;
+    border-radius: 10px;
+  }
+
+  .resume-header {
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .resume-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .resume-header h2 {
+    font-size: 1.05rem;
+  }
+
   .resume-content {
-    padding: 1.25rem 1.5rem 1.5rem;
+    padding: 1.25rem 1.25rem 1.5rem;
   }
 
   .print-actions {

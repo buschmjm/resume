@@ -18,7 +18,7 @@
   <div class="resume-wrapper">
     <header class="resume-header">
       <h1>Jacob Buschmann</h1>
-      <h2>AI Engineer | Agentic Systems, AI Automation &amp; AI Platform Engineering</h2>
+      <h2>AI Engineer | Agentic Systems, LLM Applications &amp; Automation Platforms</h2>
       <div class="contact">
         <span><strong>Phone:</strong> 760-718-9504</span>
         <span><strong>Email:</strong> <a href="mailto:buschmann.jake@gmail.com">buschmann.jake@gmail.com</a></span>
@@ -29,66 +29,60 @@
     </header>
     <div class="resume-content">
       <h4 class="section-title">Professional Summary</h4>
-      <p>AI platform and infrastructure engineer and U.S. Navy veteran. Seven years in IT building internal tools, APIs, and integrations, the last year owning the build, release, and deployment platform behind a multi-tenant mobile product that ships hundreds of white-label apps. Currently designing and building an internal AI agent platform: self-hosted LLM inference on Kubernetes, a deterministic dispatcher, verification of agent work, and retrieval over a 100,000-ticket corpus. Build with AI coding tools (Claude Code, OpenAI Codex, Cursor, GitHub Copilot) while owning architecture, review, integration, and deployment. Take projects from first prototype to production.</p>
+      <p>Engineer who builds AI systems that do real work inside a business, along with the infrastructure they run on. U.S. Navy veteran with seven years in IT. At Patron Points I am designing and building the internal AI agent platform: self-hosted LLMs on Kubernetes, a deterministic dispatcher, retrieval over 100,000 support tickets, and checks that verify agent output before anything moves on. I also own the build and deployment platform behind hundreds of white-label mobile apps. I work with coding agents every day (Claude Code, Codex, Cursor, Copilot) and like to own a project from the first prototype through architecture, build, and production.</p>
       <h4 class="section-title">Experience</h4>
       <div class="job-block">
         <p class="job-title">Infrastructure Engineer</p>
         <p class="job-meta">Patron Points Inc, Woodbury, MN | October 2025 to Present</p>
-        <p class="job-scope">Own the platform and release infrastructure behind hundreds of production white-label iOS and Android apps, and design and build the company's internal AI agent platform. Final escalation for production incidents and on-call owner; work daily with engineering, operations, and business teams.</p>
+        <p class="job-scope">Own the platform and release infrastructure behind hundreds of production white-label iOS and Android apps, and lead design and build of the company's internal AI agent platform. Final escalation for production incidents and on-call owner.</p>
         <ul>
-          <li>Designed and am building an internal AI agent platform end to end: a deterministic job dispatcher that routes and coordinates work instead of leaving every orchestration decision to an LLM, ephemeral Kubernetes worker pods for each task, self-hosted LLM inference with Ollama, PostgreSQL with pgvector for tool definitions and agent context, retrieval over a 100,000-ticket corpus, a CLI for working with agents, and OpenSearch for agent output and logs. Audit gates between every unit of agent work verify results rather than trusting model output. Inference infrastructure is provisioned and in use; the dispatcher and workers are in implementation.</li>
-          <li>Pulled 100,000+ historical support tickets out of Freshservice into self-hosted OpenSearch. The export pipeline had to work inside strict API rate limits; the resulting indexes now power search and the AI agent corpus.</li>
+          <li>Designing and building the company's AI agent platform. A deterministic dispatcher hands each task to a short-lived Kubernetes worker pod instead of letting an LLM make every orchestration call. Models run self-hosted on Ollama, PostgreSQL with pgvector holds tool definitions and agent context, and OpenSearch collects agent output and logs.</li>
+          <li>Put an audit gate between every step of agent work so results get checked before the next step uses them. Inference is provisioned and in use; the dispatcher and workers are in progress.</li>
+          <li>Moved 100,000+ historical support tickets from Freshservice into self-hosted OpenSearch through a rate-limited API. Those indexes now power ticket search and the agents' retrieval.</li>
           <li>Turned a month-long manual marketing process into a same-day pipeline on Kubernetes that generates tens of thousands of assets straight from business data.</li>
-          <li>Rebuilt the mobile build platform from the ground up as modular Python services (iOS signing, Azure DevOps, PostgreSQL, MinIO, Firebase) behind one orchestrator REST API with more than 20 endpoints, replacing a half-finished Ansible project. New client apps build in four to six minutes; 1,648 rebuilds since the redesigned API went live, with ten or more on busy days.</li>
-          <li>Build with AI coding tools (Claude Code, OpenAI Codex, Cursor, GitHub Copilot): prove the approach with a small working prototype, then use the tools to scale it into a full system while owning architecture, requirements, code review, debugging, integration, and deployment.</li>
-          <li>Built the self-service deployment platform engineering and operations use every day. Register a repo and it gets cloned, gated with lint, test, and security checks, built with kaniko, pushed to Harbor, and deployed behind Keycloak SSO. No manual steps anywhere in the path.</li>
-          <li>Leading the company-wide CI/CD migration from Azure DevOps to GitHub Actions: rebuilt the runner infrastructure, designed the target workflow pattern, migrated the first pipeline end to end as the reference implementation, and wrote the SOP the development teams now use to migrate the remaining repositories. No production release has broken.</li>
-          <li>Run the Kubernetes, FluxCD (GitOps), and Helm platform across on-prem, Azure, GCP, and Firebase, with the supporting stack: Keycloak SSO with OIDC, Vaultwarden, OpenBao secrets, Grafana dashboards, OpenTelemetry tracing, and GoAlert on-call. Root-caused months of fleet-wide HPA autoscaling churn to undersized resource requests and fixed it with right-sized requests and a scale-down stabilization window.</li>
-          <li>Leading identity consolidation for the company's SOC 2 effort: audited Active Directory against Entra ID, surfaced stale privileged accounts and missing domain controller audit logging, and designed the Entra-as-source-of-truth migration.</li>
+          <li>Rebuilt the mobile build platform as modular Python services (iOS signing, Azure DevOps, PostgreSQL, MinIO, Firebase) behind one orchestrator REST API with 20+ endpoints, replacing a half-finished Ansible project. New client apps now build in four to six minutes, with 1,648 rebuilds through the new API so far.</li>
+          <li>Built the build platform and the marketing pipeline with coding agents: proved each idea with a small prototype first, then directed Claude Code, Codex, and Cursor to scale it into a full system while I owned the architecture, code review, debugging, and deployment.</li>
+          <li>Built the self-service deployment platform engineering and operations use every day. Register a repo and it gets cloned, gated with lint, test, and security checks, built with kaniko, pushed to Harbor, and deployed behind Keycloak SSO, with no manual steps.</li>
+          <li>Leading the company-wide CI/CD migration from Azure DevOps to GitHub Actions: rebuilt the runners, designed the standard workflow, migrated the reference pipeline, and wrote the SOP the dev teams follow for the rest.</li>
+          <li>Run Kubernetes with FluxCD and Helm across on-prem, Azure, GCP, and Firebase, along with Keycloak SSO, OpenBao secrets, Grafana, OpenTelemetry, and GoAlert on-call.</li>
         </ul>
       </div>
       <div class="job-block">
         <p class="job-title">Systems Administrator (2020 to 2025) | IT Helpdesk (2019 to 2020)</p>
         <p class="job-meta">Matt's Moving, Saint Paul, MN | July 2019 to October 2025</p>
-        <p class="job-scope">Sole IT owner and in-house developer for a 120-person moving company across six years. Ran Windows Server, Active Directory, Microsoft 365, Google Workspace, GCP and Azure resources, endpoints, and the company WordPress site, and built the company's APIs, integrations, and internal tools. Concurrently held the Sales Director title (2020 to 2022) and Business Project Manager title (2022 to 2025) while continuing to own all company technology; managed a $120K annual technology vendor portfolio.</p>
+        <p class="job-scope">Only IT person and in-house developer for a 120-person moving company, responsible for every system plus all APIs, integrations, and internal tools. Also held the Sales Director (2020 to 2022) and Business Project Manager (2022 to 2025) titles while still owning all company technology.</p>
         <ul>
-          <li>Built a video-to-inventory tool: walk a room with a phone camera, the tool samples frames from the video, sends them to the OpenAI API, and produces an itemized inventory. Reached internal beta; shelved for business reasons before customer launch.</li>
-          <li>Eliminated more than 100 hours of manual work per month by building API, webhook, and database integrations (Python, Apps Script) across Supermove, Stripe, QuickBooks, Samsara, Google Maps, and other vendor systems.</li>
-          <li>Helped make Slack the central source of truth for internal processes: built integrations and automation that replaced paper workflows and connected business applications so staff kept working where they already were.</li>
-          <li>Designed and deployed a multi-tenant inventory import API on top of the Supermove CRM that four other moving companies used for several years to load customer inventories. Kept every company's inventory data separated in a single database, built and styled each company's customer-facing inventory forms, and served as their primary technical contact.</li>
-          <li>Automated most of the sales team's manual workflow while leading it as Sales Director: call follow-up reminders, automated customer follow-up texts, same-day briefings texted to crews, and a CRM data export feeding a sales metrics table. Built a post-move rating flow that routes satisfied customers to a Google review link and unsatisfied ones to a feedback form and the customer service manager; roughly doubled Google reviews and lifted the rating about half a star.</li>
-          <li>Led a company-wide CRM migration end to end as the technology owner while also serving as Sales Director: requirements from every department, vendor developer coordination, testing, training, and rollout without disrupting daily bookings.</li>
+          <li>Built a video-to-inventory tool that samples frames from a phone walkthrough, sends them to the OpenAI API, and returns an itemized inventory. Reached internal beta before being shelved for business reasons.</li>
+          <li>Cut more than 100 hours of manual work per month with API, webhook, and database integrations (Python, Apps Script) across Supermove, Stripe, QuickBooks, Samsara, Google Maps, and other vendor systems.</li>
+          <li>Helped make Slack the hub for internal processes, replacing paper workflows with integrations that brought business apps into Slack so staff did not have to learn new systems.</li>
+          <li>Designed and ran a multi-tenant inventory import API on top of the Supermove CRM that four other moving companies used for several years, and was their main technical contact.</li>
+          <li>Automated most of the sales team's manual work while running it. A post-move rating flow sent happy customers to Google and unhappy ones to the service manager, roughly doubling reviews and raising the rating about half a star.</li>
+          <li>Led a company-wide CRM migration as the technology owner: requirements from every department, vendor coordination, testing, training, and rollout without disrupting daily bookings.</li>
         </ul>
       </div>
       <h4 class="section-title">Selected Projects</h4>
       <ul class="skills-list">
-        <li><strong>Dungeoneering with Friends:</strong> AI game master web app and Android app (Vue 3, Flask, PostgreSQL, pgvector) with persistent campaigns, tool-driven AI interactions, combat, inventory, character progression, shops, and multiplayer. Most mechanics are deterministic and the LLM is used where it adds value: the DM reads campaign prep notes through pgvector retrieval instead of inventing details, with an Ollama tool-calling worker, OpenAI support, and TTS, running on Kubernetes. Mobile release in testing. Live at <a href="https://dungeoneering.jbuschmann.com">dungeoneering.jbuschmann.com</a>.</li>
-        <li><strong>Autonomous coding agent pipeline:</strong> Agents plan development tasks, generate multi-file code, run TypeScript, ESLint, and Jest checks, feed failures back for automated repair, and commit verified changes, keeping project context and documentation between runs.</li>
-        <li><strong>On-device AI assistant (Android):</strong> Local LLM inference via llama.cpp with custom JNI and Vulkan GPU acceleration, tool-calling runtime, and KV-cache optimization.</li>
+        <li><strong>Dungeoneering with Friends</strong> (<a href="https://dungeoneering.jbuschmann.com">dungeoneering.jbuschmann.com</a>): AI game master for tabletop RPGs on web and Android (Vue 3, Flask, PostgreSQL, pgvector, Ollama, OpenAI) with persistent campaigns, multiplayer, combat, inventory, and shops. Game rules run as normal code; the LLM handles narration and DM calls, pulling from campaign notes through retrieval instead of making things up. Runs on Kubernetes; Android release in testing.</li>
+        <li><strong>Coding agent pipeline:</strong> Agents plan tasks, write code across multiple files, run TypeScript, ESLint, and Jest, hand failures back to the agent to fix, and commit only changes that pass. Project context and docs carry over between runs.</li>
+        <li><strong>On-device AI assistant (Android):</strong> Local LLM inference via llama.cpp with custom JNI and Vulkan GPU acceleration, a tool-calling runtime, and KV-cache optimization.</li>
         <li><strong>Intake Relay:</strong> Headless intake API with versioned flows, webhook retries, HMAC signing, and Stripe integration; in production for internal use.</li>
       </ul>
       <h4 class="section-title">Earlier Experience</h4>
-      <div class="job-block">
-        <p class="job-title">Operations Roles</p>
-        <p class="job-meta">AAction Movers; Ad-Ler Roofing; University Cancer and Blood Center | 2016 to 2019</p>
-        <p>Move coordination, multi-site crew supervision with OSHA compliance, and tumor board coordination across hospital sites.</p>
-      </div>
       <div class="job-block">
         <p class="job-title">Administrative Specialist, Petty Officer 3rd Class (U.S. Navy veteran)</p>
         <p class="job-meta">United States Navy, San Diego, CA | 2013 to 2016</p>
         <p>Supervised a team of 5 and ran the separations department during an 11-month deployment. Held a Top Secret security clearance (inactive).</p>
       </div>
+      <p><strong>Operations roles</strong>, 2016 to 2019: AAction Movers, Ad-Ler Roofing, University Cancer and Blood Center.</p>
       <h4 class="section-title">Core Skills</h4>
       <ul class="skills-list">
-        <li><strong>AI &amp; Agent Engineering:</strong> Agent orchestration and execution loops, tool calling, MCP, RAG, embeddings, pgvector, self-hosted LLMs (Ollama, llama.cpp), OpenAI API, output validation and audit gates</li>
-        <li><strong>AI-Assisted Development:</strong> Claude Code, OpenAI Codex, Cursor, GitHub Copilot</li>
-        <li><strong>Languages &amp; Backend:</strong> Python (Flask, FastAPI), TypeScript, JavaScript, Vue, React, Bash, SQL, PowerShell, REST API design, webhooks, HMAC signing</li>
+        <li><strong>AI &amp; Agents:</strong> Agent orchestration, tool calling, MCP, RAG, embeddings, pgvector, self-hosted LLMs (Ollama, llama.cpp), OpenAI API, agent output verification</li>
+        <li><strong>Coding Agents:</strong> Claude Code, OpenAI Codex, Cursor, GitHub Copilot</li>
+        <li><strong>Languages &amp; Backend:</strong> Python (Flask, FastAPI), TypeScript, JavaScript, Vue, React, SQL, Bash, REST APIs, webhooks</li>
         <li><strong>Data:</strong> PostgreSQL, MySQL, OpenSearch, pgvector</li>
-        <li><strong>Platform &amp; CI/CD:</strong> Kubernetes, Helm, FluxCD, GitOps, Docker, GitHub Actions, Azure DevOps, Terraform, Ansible, Harbor, kaniko, Linux</li>
-        <li><strong>Cloud:</strong> GCP, Azure, Firebase, hybrid on-prem, Proxmox, VMware, k3s</li>
-        <li><strong>Reliability &amp; Observability:</strong> Grafana, Prometheus, OpenTelemetry, OpenSearch, GoAlert on-call, incident response</li>
-        <li><strong>Identity, Security &amp; Compliance:</strong> Keycloak, OIDC, OpenBao, Vaultwarden, Active Directory, Entra ID, SOC 2 controls</li>
-        <li><strong>Integrations:</strong> Slack, Stripe, QuickBooks, Samsara, Supermove, Google Maps, WordPress</li>
+        <li><strong>Platform &amp; CI/CD:</strong> Kubernetes, Helm, FluxCD, Docker, k3s, GitHub Actions, Azure DevOps, Terraform, Ansible, Linux</li>
+        <li><strong>Cloud &amp; Ops:</strong> GCP, Azure, Firebase, on-prem, Grafana, OpenTelemetry, Keycloak, OIDC, OpenBao</li>
+        <li><strong>Integrations:</strong> Slack, Stripe, QuickBooks, Samsara, Supermove, Google Maps</li>
       </ul>
       <h4 class="section-title">Education</h4>
       <p>Technical Diploma, IT, Software Development Specialist<br>Chippewa Valley Technical College, Eau Claire, WI</p>

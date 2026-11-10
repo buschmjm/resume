@@ -18,7 +18,7 @@
   <div class="resume-wrapper">
     <header class="resume-header">
       <h1>Jacob Buschmann</h1>
-      <h2>AI Engineer | Agentic Systems, LLM Applications &amp; Automation Platforms</h2>
+      <h2>AI Platform Engineer | Agentic Systems, LLM Infrastructure &amp; Automation</h2>
       <div class="contact">
         <span><strong>Phone:</strong> 760-718-9504</span>
         <span><strong>Email:</strong> <a href="mailto:buschmann.jake@gmail.com">buschmann.jake@gmail.com</a></span>
@@ -29,16 +29,16 @@
     </header>
     <div class="resume-content">
       <h4 class="section-title">Professional Summary</h4>
-      <p>Engineer who builds AI systems that do real work inside a business, along with the infrastructure they run on. U.S. Navy veteran with seven years in IT. At Patron Points I am designing and building the internal AI agent platform: self-hosted LLMs on Kubernetes, a deterministic dispatcher, retrieval over 100,000 support tickets, and checks that verify agent output before anything moves on. I also own the build and deployment platform behind hundreds of white-label mobile apps. I work with coding agents every day (Claude Code, Codex, Cursor, Copilot) and like to own a project from the first prototype through architecture, build, and production.</p>
+      <p>I build AI systems that do real work inside a business, along with the infrastructure they run on. U.S. Navy veteran with seven years in IT. At Patron Points, I'm designing and building the internal AI agent platform: self-hosted LLMs on Kubernetes, a deterministic dispatcher, retrieval over 100,000+ support tickets, and checks that verify agent output before the next step runs. I also own the build and deployment platform behind hundreds of white-label mobile apps. I work with coding agents every day (Claude Code, Codex, Cursor, Copilot) and like to own a project from the first prototype through architecture, build, and production.</p>
       <h4 class="section-title">Experience</h4>
       <div class="job-block">
         <p class="job-title">Infrastructure Engineer</p>
         <p class="job-meta">Patron Points Inc, Woodbury, MN | October 2025 to Present</p>
         <p class="job-scope">Own the platform and release infrastructure behind hundreds of production white-label iOS and Android apps, and lead design and build of the company's internal AI agent platform. Final escalation for production incidents and on-call owner.</p>
         <ul>
-          <li>Designing and building the company's AI agent platform. A deterministic dispatcher hands each task to a short-lived Kubernetes worker pod instead of letting an LLM make every orchestration call. Models run self-hosted on Ollama, PostgreSQL with pgvector holds tool definitions and agent context, and OpenSearch collects agent output and logs.</li>
-          <li>Put an audit gate between every step of agent work so results get checked before the next step uses them. Inference is provisioned and in use; the dispatcher and workers are in progress.</li>
-          <li>Moved 100,000+ historical support tickets from Freshservice into self-hosted OpenSearch through a rate-limited API. Those indexes now power ticket search and the agents' retrieval.</li>
+          <li>Designing and building the company's AI agent platform. A deterministic dispatcher decides what runs next and hands each task to a short-lived Kubernetes worker pod, rather than letting an LLM control the workflow. Models run self-hosted on Ollama, PostgreSQL with pgvector holds tool definitions and agent context, and OpenSearch collects agent output and logs.</li>
+          <li>Building an audit gate into the workflow so each step's output is checked before the next step uses it. Inference is provisioned and in use; the dispatcher and workers are in progress.</li>
+          <li>Moved 100,000+ historical support tickets from Freshservice into self-hosted OpenSearch with a rate-limited API ingestion process. The data now supports ticket search and retrieval for the agents.</li>
           <li>Turned a month-long manual marketing process into a same-day pipeline on Kubernetes that generates tens of thousands of assets straight from business data.</li>
           <li>Rebuilt the mobile build platform as modular Python services (iOS signing, Azure DevOps, PostgreSQL, MinIO, Firebase) behind one orchestrator REST API with 20+ endpoints, replacing a half-finished Ansible project. New client apps now build in four to six minutes, with 1,648 rebuilds through the new API so far.</li>
           <li>Built the build platform and the marketing pipeline with coding agents: proved each idea with a small prototype first, then directed Claude Code, Codex, and Cursor to scale it into a full system while I owned the architecture, code review, debugging, and deployment.</li>
@@ -84,6 +84,8 @@
         <li><strong>Cloud &amp; Ops:</strong> GCP, Azure, Firebase, on-prem, Grafana, OpenTelemetry, Keycloak, OIDC, OpenBao</li>
         <li><strong>Integrations:</strong> Slack, Stripe, QuickBooks, Samsara, Supermove, Google Maps</li>
       </ul>
+      <h4 class="section-title">Professional Development</h4>
+      <p>Applied AI Conference, Minneapolis, MN | 2026</p>
       <h4 class="section-title">Education</h4>
       <p>Technical Diploma, IT, Software Development Specialist<br>Chippewa Valley Technical College, Eau Claire, WI</p>
     </div>

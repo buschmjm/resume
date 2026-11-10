@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob Buschmann - Software Engineer, Internal Tools &amp; Automation</title>
+  <link rel="stylesheet" href="resume.css?v=3">
+</head>
+<body data-resume="software">
+  <div class="print-actions">
+    <button type="button" class="print-btn" id="print-menu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="print-menu">Download PDF</button>
+    <div class="print-menu" id="print-menu" hidden role="menu" aria-labelledby="print-menu-toggle">
+      <p class="print-menu-title">Save as PDF (ATS, single column)</p>
+      <button type="button" class="print-menu-item" role="menuitem" data-download="devops"><strong>DevOps / Platform Engineer</strong><span>Kubernetes, GitOps, CI/CD, identity, and reliability first.</span></button>
+      <button type="button" class="print-menu-item" role="menuitem" data-download="ai"><strong>AI Platform Engineer</strong><span>Agentic systems, AI automation, and AI platform work first.</span></button>
+      <button type="button" class="print-menu-item" role="menuitem" data-download="software"><strong>Software Engineer, Internal Tools &amp; Automation</strong><span>Business applications, integrations, automation, and product delivery first.</span></button>
+    </div>
+  </div>
+  <div class="resume-wrapper">
+    <header class="resume-header">
+      <h1>Jacob Buschmann</h1>
+      <h2>Software Engineer | Internal Tools, Business Systems &amp; Automation</h2>
+      <div class="contact">
+        <span><strong>Phone:</strong> 760-718-9504</span>
+        <span><strong>Email:</strong> <a href="mailto:buschmann.jake@gmail.com">buschmann.jake@gmail.com</a></span>
+        <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacobmbuschmann">linkedin.com/in/jacobmbuschmann</a></span>
+        <span><strong>GitHub:</strong> <a href="https://github.com/buschmjm">github.com/buschmjm</a></span>
+        <span><strong>Portfolio:</strong> <a href="https://willowriverautomation.com">willowriverautomation.com</a></span>
+      </div>
+    </header>
+    <div class="resume-content">
+      <h4 class="section-title">Professional Summary</h4>
+      <p>Software engineer focused on internal tools, business applications, integrations, and automation. Seven years of hands-on IT experience building software and systems that solve practical business problems. Comfortable working from an unclear requirement through technical design, implementation, integration, and deployment. Previously the only IT owner and in-house developer for a 120-person business, and now building internal engineering platforms and automation for a multi-tenant mobile product company.</p>
+
+      <h4 class="section-title">Experience</h4>
+      <div class="job-block">
+        <p class="job-title">Infrastructure Engineer</p>
+        <p class="job-meta">Patron Points Inc, Woodbury, MN | October 2025 to Present</p>
+        <p class="job-scope">Build internal engineering software and automation supporting the development, build, and release of hundreds of production white-label iOS and Android apps. Work across backend services, APIs, databases, CI/CD, cloud platforms, and infrastructure.</p>
+        <ul>
+          <li>Built a modular mobile build platform using Python services, PostgreSQL, and REST APIs. Its central orchestrator exposes 20+ endpoints and has processed 1,648 rebuilds, with new client apps typically building in four to six minutes.</li>
+          <li>Designed and built a self-service deployment platform that takes repositories through registration, code checks, security gates, container builds, image publishing, and deployment behind Keycloak authentication without manual intervention.</li>
+          <li>Built a marketing automation pipeline that reduced a process previously taking about a month to same-day execution, generating tens of thousands of assets directly from business data.</li>
+          <li>Migrated more than 100,000 historical support tickets from Freshservice into OpenSearch through a rate-limited API integration, making the data available for search and retrieval.</li>
+          <li>Leading the migration from Azure DevOps to GitHub Actions, including runner infrastructure, standardized workflows, and reference pipelines for development teams.</li>
+          <li>Led most of the company's migration from on-premises Active Directory to Microsoft Entra ID, making Entra the primary identity source while retaining on-premises AD as read-only.</li>
+          <li>Developing a general-purpose internal AI agent platform with a deterministic dispatcher, Kubernetes workers, MCP servers, self-hosted model inference, PostgreSQL and pgvector, and OpenSearch. The platform is designed to support different agent workflows rather than a single use case; dispatcher and worker execution remain in progress.</li>
+          <li>Help build and operate the systems behind internal engineering tools, including Kubernetes, FluxCD, Helm, Keycloak, OpenBao, Grafana, OpenTelemetry, and on-call tooling.</li>
+        </ul>
+      </div>
+
+      <div class="job-block">
+        <p class="job-title">Systems Administrator / Business Project Manager</p>
+        <p class="job-meta">Matt's Moving, Saint Paul, MN | July 2019 to October 2025</p>
+        <p class="job-scope">Only IT owner and in-house developer for a 120-person moving company. Built and maintained internal applications, APIs, integrations, and automations while managing the company's technology systems. Also held the Sales Director title from 2020 to 2022.</p>
+        <ul>
+          <li>Eliminated more than 100 hours of manual work per month by building Python automation and integrations across business systems, APIs, webhooks, and databases, including Supermove, Stripe, QuickBooks, Samsara, and Google Maps.</li>
+          <li>Designed and maintained a multi-tenant inventory import API for the company's CRM. Four other moving companies used the system for several years, with separate customer data and workflows.</li>
+          <li>Built an AI-assisted inventory tool that analyzed video walkthroughs of homes and identified furniture and other items. Brought the application to internal beta.</li>
+          <li>Led a company-wide CRM migration, gathering requirements across departments, coordinating with vendor developers, testing workflows, training staff, and managing rollout without disrupting daily bookings.</li>
+          <li>Connected business systems through Slack integrations, turning Slack into a central workflow hub and replacing several paper-based processes.</li>
+          <li>Automated sales operations, customer follow-ups, crew briefings, reporting, and review collection. The review process roughly doubled Google reviews and increased the average rating by about half a star.</li>
+          <li>Owned company technology across Windows Server, Active Directory, Microsoft 365, Google Workspace, GCP, Azure, endpoints, networking, and vendor relationships.</li>
+        </ul>
+        <p class="job-scope"><strong>Earlier roles at Matt's Moving:</strong> Sales Director (2020 to 2022); Sales Team Member and IT Helpdesk Support (2019 to 2020).</p>
+      </div>
+
+      <h4 class="section-title">Selected Projects</h4>
+      <ul class="skills-list">
+        <li><strong>Dungeoneering with Friends:</strong> Built a web and Android multiplayer tabletop RPG with persistent campaigns, combat, inventory, and AI-assisted game mastering. Uses deterministic game rules with LLM-generated narration and responses, backed by Python, Vue, and PostgreSQL.</li>
+        <li><strong>On-device AI assistant:</strong> Developed an Android assistant using local language models through llama.cpp, with custom JNI integration, Vulkan GPU acceleration, tool calling, and KV-cache optimization.</li>
+        <li><strong>Coding agent pipeline:</strong> Built a workflow for AI coding agents to plan tasks, modify code across multiple files, run tests and linting, and address failures before committing changes. Designed to preserve project context between runs.</li>
+        <li><strong>Intake Relay:</strong> Built a headless intake API with versioned flows, webhook retries, HMAC signing, and Stripe integration; in production for internal use.</li>
+      </ul>
+
+      <h4 class="section-title">Technical Skills</h4>
+      <ul class="skills-list">
+        <li><strong>Languages &amp; Backend:</strong> Python, Flask, FastAPI, JavaScript, TypeScript, SQL, Bash, REST API design</li>
+        <li><strong>Applications &amp; Integrations:</strong> Vue, React, webhooks, third-party APIs, Slack, Stripe, QuickBooks, Samsara, Google Maps</li>
+        <li><strong>Databases &amp; Search:</strong> PostgreSQL, MySQL, OpenSearch, pgvector</li>
+        <li><strong>Automation &amp; Delivery:</strong> CI/CD, GitHub Actions, Azure DevOps, workflow automation, Docker, Kubernetes</li>
+        <li><strong>Cloud &amp; Infrastructure:</strong> Azure, GCP, Firebase, Linux, Terraform, Ansible, Helm, FluxCD</li>
+        <li><strong>AI Development:</strong> Ollama, llama.cpp, OpenAI API, RAG, MCP, agent orchestration, Claude Code, Codex, Cursor, GitHub Copilot</li>
+        <li><strong>Identity &amp; Operations:</strong> Keycloak, OIDC, Active Directory, Microsoft Entra ID, OpenBao, Grafana, OpenTelemetry</li>
+      </ul>
+
+      <h4 class="section-title">Military Service</h4>
+      <div class="job-block">
+        <p class="job-title">Administrative Specialist, Petty Officer Third Class</p>
+        <p class="job-meta">United States Navy, San Diego, CA | 2013 to 2016</p>
+        <p>Supervised a five-person team and managed the separations department during an 11-month deployment.</p>
+      </div>
+
+      <h4 class="section-title">Education</h4>
+      <p>Technical Diploma, IT, Software Development Specialist<br>Chippewa Valley Technical College, Eau Claire, WI</p>
+    </div>
+  </div>
+  <script src="print.js?v=3"></script>
+</body>
+</html>

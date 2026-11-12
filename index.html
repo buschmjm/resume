@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jacob Buschmann - Platform Engineering Resume</title>
+  <title>Jacob Buschmann - Platform and DevOps Engineer Resume</title>
   <link rel="stylesheet" href="resume.css?v=4">
 </head>
 <body data-resume="devops">
@@ -11,15 +11,16 @@
     <button type="button" class="print-btn" id="print-menu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="print-menu">Download PDF</button>
     <div class="print-menu" id="print-menu" hidden role="menu" aria-labelledby="print-menu-toggle">
       <p class="print-menu-title">Save as PDF (ATS, single column)</p>
-      <button type="button" class="print-menu-item" role="menuitem" data-download="devops"><strong>Platform Engineer</strong><span>This page. Kubernetes, CI/CD, internal platforms and reliability first.</span></button>
-      <button type="button" class="print-menu-item" role="menuitem" data-download="ai"><strong>AI Platform Engineer</strong><span>Agentic systems, AI applications and LLM infrastructure first.</span></button>
+      <button type="button" class="print-menu-item" role="menuitem" data-download="devops"><strong>Platform and DevOps Engineer</strong><span>This page. Kubernetes, CI/CD, internal platforms and reliability first.</span></button>
+      <button type="button" class="print-menu-item" role="menuitem" data-download="ai"><strong>AI Engineer</strong><span>AI agents, LLM applications and AI infrastructure first.</span></button>
     </div>
   </div>
   <div class="resume-wrapper">
     <header class="resume-header">
       <h1>Jacob Buschmann</h1>
-      <h2>Platform Engineer | Kubernetes, CI/CD, Automation &amp; AI Infrastructure</h2>
+      <h2>Platform and DevOps Engineer | Kubernetes, CI/CD, Infrastructure as Code &amp; Automation</h2>
       <div class="contact">
+        <span><strong>Location:</strong> Minneapolis-Saint Paul, MN (open to remote)</span>
         <span><strong>Phone:</strong> 760-718-9504</span>
         <span><strong>Email:</strong> <a href="mailto:buschmann.jake@gmail.com">buschmann.jake@gmail.com</a></span>
         <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jacobmbuschmann">linkedin.com/in/jacobmbuschmann</a></span>
@@ -29,34 +30,34 @@
     </header>
     <div class="resume-content">
       <h4 class="section-title">Professional Summary</h4>
-      <p>Platform engineer and U.S. Navy veteran with seven years in IT. At Patron Points, I own build, release and deployment infrastructure supporting more than 300 production mobile applications. I have built internal platforms and automation across Kubernetes, CI/CD, identity, secrets and observability, and I am leading the move from Azure DevOps to GitHub Actions. Before that, I spent six years as the only IT person and in house developer for a 120 person company, building business applications, APIs and integrations.</p>
+      <p>Platform engineer and U.S. Navy veteran with seven years in IT, working across DevOps, CI/CD and cloud infrastructure. At Patron Points I run the systems that build and release more than 300 production mobile apps, and I am leading the company's CI/CD migration from Azure DevOps to GitHub Actions. A lot of my work is building self-service tools on Kubernetes so other teams can deploy their own software, along with the single sign-on, secrets management and monitoring those tools depend on. Before that I spent six years as the only IT person and in-house developer at a 120-person moving company, where I built the business apps, APIs and integrations the company ran on.</p>
 
       <h4 class="section-title">Experience</h4>
       <div class="job-block">
         <p class="job-title">Infrastructure Engineer</p>
         <p class="job-meta">Patron Points Inc, Woodbury, MN | October 2025 to Present</p>
-        <p class="job-scope">Own platform and release infrastructure for more than 300 production white label iOS and Android applications. Work across Kubernetes, FluxCD, Helm, Terraform, Ansible, Azure, GCP and on premises systems. Final escalation for production incidents and on call owner.</p>
+        <p class="job-scope">Responsible for the platform and release infrastructure behind more than 300 white-label iOS and Android apps in production. Work spans Kubernetes, Docker and infrastructure as code (Terraform, Ansible) across on-premises servers, Azure and GCP. On-call owner and final escalation point for production incidents.</p>
         <ul>
-          <li>Leading the company wide migration from Azure DevOps to GitHub Actions. Rebuilt runner infrastructure, designed the standard workflow, migrated the reference pipeline and documented the process for development teams.</li>
-          <li>Built a self service deployment platform used by engineering and operations. It validates repositories, runs lint, test and security checks, builds container images, publishes them to Harbor and deploys to Kubernetes behind Keycloak authentication.</li>
-          <li>Rebuilt the mobile build platform as modular Python services behind a central orchestration API, integrating iOS signing, Azure DevOps, PostgreSQL, MinIO and Firebase. Supports 300+ production applications across iOS and Android. A full fleet rebuild triggers approximately 600 build jobs and takes 24 to 48 hours to process.</li>
-          <li>Built and maintain Kubernetes and GitOps infrastructure with FluxCD and Helm across on premises environments, Azure and GCP. Also operate identity and secrets services including Keycloak, OpenBao and Microsoft Entra ID.</li>
-          <li>Set up monitoring and on call for core data pipelines with health checks, Grafana dashboards, OpenTelemetry tracing, OpenSearch log retention and GoAlert schedules. Troubleshoot production incidents across Kubernetes, databases and network infrastructure.</li>
-          <li>Led most of the migration from on premises Active Directory to Microsoft Entra ID, making Entra ID the source of truth while retaining on premises AD in read only mode.</li>
-          <li>Built a Kubernetes marketing pipeline that replaced a month long manual process with same day generation of tens of thousands of assets from business data.</li>
-          <li>Designing and building a general purpose internal AI agent platform using a deterministic dispatcher, Kubernetes workers, MCP servers and self hosted LLM inference. The dispatcher controls task execution rather than delegating workflow decisions to a model. The platform is still in development.</li>
+          <li>Leading the company-wide CI/CD migration from Azure DevOps to GitHub Actions. I rebuilt the build runners, designed a standard workflow teams can reuse, migrated the first pipeline as a reference and wrote the guide developers follow.</li>
+          <li>Built a self-service deployment platform used by engineering and operations. Point it at a repository and it checks the code, runs tests and security scans, builds a container image, stores it in Harbor and deploys it to Kubernetes behind company single sign-on (Keycloak).</li>
+          <li>Rebuilt the mobile build system as a set of small Python services behind one API that provisions, builds, signs and ships each app. It supports all 300+ iOS and Android apps. A full rebuild of the fleet is about 600 build jobs and takes 24 to 48 hours.</li>
+          <li>Built and run the Kubernetes clusters behind these services, on-premises and in Azure and GCP. Everything deploys from git (GitOps) with FluxCD and Helm, so every change is tracked. Also run the company's sign-in and secrets management systems: Keycloak, OpenBao and Microsoft Entra ID.</li>
+          <li>Set up monitoring and on-call for the core data pipelines: health checks, Grafana dashboards, request tracing (OpenTelemetry), searchable logs (OpenSearch) and GoAlert paging schedules. I handle incident response for production and track down the cause, whether it is in Kubernetes, a database or the network.</li>
+          <li>Led most of the migration from on-premises Active Directory to Microsoft Entra ID. Entra ID is now the source of truth for accounts, and the old directory is kept read-only.</li>
+          <li>Built a Kubernetes pipeline that generates tens of thousands of marketing images from business data in a single day. The manual process it replaced took a month.</li>
+          <li>Designing and building a general-purpose internal AI agent platform on Kubernetes, using self-hosted LLMs and MCP tool servers. Ordinary code, not the model, decides which steps run and in what order. Still in development.</li>
         </ul>
       </div>
 
       <div class="job-block">
-        <p class="job-title">Systems Administrator | IT Helpdesk | Sales Director | Business Project Manager</p>
+        <p class="job-title">Systems Administrator and In-House Developer</p>
         <p class="job-meta">Matt's Moving, Saint Paul, MN | July 2019 to October 2025</p>
-        <p class="job-scope">Only IT person and in house developer for a 120 person moving company. Progressed from helpdesk and sales into systems administration, sales leadership and business project management while continuing to own company technology and a $120K annual vendor budget.</p>
+        <p class="job-scope">Only IT person and in-house developer for a 120-person moving company. Started in helpdesk and sales, then moved into systems administration, sales leadership and business project management, while staying responsible for all company technology and a $120K annual vendor budget.</p>
         <ul>
-          <li>Developed internal applications for warehouse management, inventory, shipment tracking, field service and DOT compliance, replacing manual processes and improving visibility across daily operations.</li>
-          <li>Designed and maintained a multi tenant inventory import API integrated with Supermove CRM. Four other moving companies used the service for several years, with separate company data and customer facing forms.</li>
-          <li>Cut more than 100 hours of manual work per month through Python, Apps Script, API, webhook and database integrations across Supermove, Stripe, QuickBooks, Samsara and Google Maps. Also led CRM migration, testing, training and rollout.</li>
-          <li>Automated sales and customer workflows, including follow up reminders, crew briefings, reporting and post move review requests. The review process roughly doubled Google reviews and raised the average rating by about half a star.</li>
+          <li>Built the internal apps the company ran on day to day: warehouse management, inventory, shipment tracking, field service and DOT compliance. They replaced manual processes and made daily operations easier to see and track.</li>
+          <li>Designed and ran a multi-tenant inventory import API for the Supermove CRM. Four other moving companies used it for several years, each with its own customer-facing forms and its data kept separate.</li>
+          <li>Cut more than 100 hours of manual work a month by connecting Supermove, Stripe, QuickBooks, Samsara, Google Maps and Slack with Python, Apps Script, APIs and webhooks. Also led the technical side of the company-wide CRM migration, including testing, training and rollout.</li>
+          <li>Automated routine sales and customer work: follow-up reminders, crew briefings, reports and review requests after each move. The review requests roughly doubled the company's Google reviews and raised its average rating by about half a star.</li>
         </ul>
       </div>
 
@@ -64,33 +65,33 @@
       <div class="job-block">
         <p class="job-title">Administrative Specialist, Petty Officer Third Class | U.S. Navy Veteran</p>
         <p class="job-meta">United States Navy, San Diego, CA | 2013 to 2016</p>
-        <p>Supervised a team of five and ran the separations department during an 11 month deployment. Previously held a Top Secret security clearance, now inactive.</p>
+        <p>Supervised a team of five and ran the separations department during an 11-month deployment. Previously held a Top Secret security clearance, now inactive.</p>
       </div>
       <p><strong>Operations roles</strong>, 2016 to 2019: AAction Movers, Ad Ler Roofing, University Cancer and Blood Center.</p>
 
       <h4 class="section-title">Core Skills</h4>
       <ul class="skills-list">
-        <li><strong>Platform:</strong> Kubernetes, Helm, FluxCD, GitOps, Docker, Harbor, kaniko, Traefik, MinIO, Proxmox, VMware, Linux</li>
-        <li><strong>CI/CD and IaC:</strong> GitHub Actions, Azure DevOps, Terraform, Ansible, Python automation</li>
-        <li><strong>Cloud and infrastructure:</strong> GCP, Azure, Firebase, on premises and hybrid environments</li>
-        <li><strong>Reliability:</strong> Grafana, Prometheus, OpenTelemetry, OpenSearch, GoAlert, incident response</li>
-        <li><strong>Identity and security:</strong> Keycloak, OIDC, OpenBao, Active Directory, Entra ID, FortiGate</li>
+        <li><strong>Platform:</strong> Kubernetes, Helm, FluxCD, GitOps, Docker, Harbor, kaniko, Traefik, MinIO (S3-compatible storage), Proxmox, VMware, Linux</li>
+        <li><strong>CI/CD and Infrastructure as Code (IaC):</strong> GitHub Actions, Azure DevOps, Terraform, Ansible, Python automation</li>
+        <li><strong>Cloud and infrastructure:</strong> GCP, Azure, Firebase, on-premises and hybrid environments</li>
+        <li><strong>Observability and reliability:</strong> Grafana, Prometheus, OpenTelemetry, OpenSearch (Elasticsearch fork), GoAlert, on-call, incident response</li>
+        <li><strong>Identity and security:</strong> Keycloak, SSO, OIDC, OpenBao (HashiCorp Vault fork), secrets management, Active Directory, Entra ID, FortiGate</li>
         <li><strong>Data and development:</strong> PostgreSQL, MySQL, REST APIs, webhooks, Python, Flask, Bash, SQL, JavaScript, PowerShell</li>
         <li><strong>Integrations:</strong> Slack, Stripe, QuickBooks, Samsara, Supermove, Google Maps</li>
       </ul>
 
       <h4 class="section-title">Selected Projects</h4>
       <ul class="skills-list">
-        <li><strong>Homelab platform:</strong> Operate a k3s environment with Forgejo, Proxmox, Cloudflare tunnels, monitoring, self hosted LLMs and automated application deployment.</li>
-        <li><strong>Dungeoneering with Friends:</strong> Built a web and Android tabletop RPG with deterministic game mechanics, AI narration, multiplayer and persistent campaigns.</li>
-        <li><strong>Intake Relay:</strong> Built a headless intake API with versioned flows, webhook retries, HMAC signing and Stripe integration.</li>
+        <li><strong>Homelab platform:</strong> Run a k3s Kubernetes cluster at home that hosts my portfolio site, my apps and the self-hosted LLMs behind them, with Forgejo, Proxmox, Cloudflare tunnels, monitoring and automated deployments.</li>
+        <li><strong>Dungeoneering with Friends:</strong> Built a multiplayer tabletop RPG for web and Android with saved campaigns and an AI game master. The rules run as regular code and the AI only narrates.</li>
+        <li><strong>Intake Relay:</strong> Built a headless API for customer intake and onboarding forms, with versioned flows, signed webhooks (HMAC) that retry on failure, and Stripe integration.</li>
       </ul>
 
       <h4 class="section-title">Professional Development</h4>
       <p>Applied AI Conference, Minneapolis, MN | 2026</p>
 
       <h4 class="section-title">Education</h4>
-      <p>Technical Diploma, IT, Software Development Specialist<br>Chippewa Valley Technical College, Eau Claire, WI</p>
+      <p>Technical Diploma, Information Technology, Software Development Specialist<br>Chippewa Valley Technical College, Eau Claire, WI</p>
     </div>
   </div>
   <script src="print.js?v=4"></script>

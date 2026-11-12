@@ -1,4 +1,4 @@
-/* Shared styles for the two single-column ATS resumes: index.html (DevOps) and ai-engineering.html */
+/* Shared styles for the two single column ATS resumes. */
 
 :root {
   --accent: #4a6995;
@@ -9,11 +9,7 @@
   --font-sans: "Segoe UI", Calibri, Arial, Helvetica, sans-serif;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -24,24 +20,11 @@ body {
   color: var(--text);
 }
 
-a {
-  color: var(--accent);
-}
+a { color: var(--accent); }
+a:hover { color: #3a5580; }
 
-a:hover {
-  color: #3a5580;
-}
-
-p {
-  margin: 0 0 0.65rem;
-  orphans: 2;
-  widows: 2;
-}
-
-ul {
-  margin: 0 0 1rem;
-  padding-left: 1.2rem;
-}
+p { margin: 0 0 0.65rem; orphans: 2; widows: 2; }
+ul { margin: 0 0 0.8rem; padding-left: 1.15rem; }
 
 .resume-wrapper {
   max-width: 8.5in;
@@ -52,7 +35,6 @@ ul {
   overflow: hidden;
 }
 
-/* Header (screen) */
 .resume-header {
   background: linear-gradient(90deg, var(--header-dark) 70%, var(--accent) 100%);
   color: #fff;
@@ -82,26 +64,19 @@ ul {
 
 .resume-header .contact span {
   display: inline-block;
-  margin-right: 1.25rem;
-  margin-bottom: 0.25rem;
+  margin-right: 1.1rem;
+  margin-bottom: 0.2rem;
 }
 
-.resume-header a {
-  color: #fff;
-  text-decoration: underline;
-}
+.resume-header a { color: #fff; text-decoration: underline; }
 
-/* Single column body */
-.resume-content {
-  padding: 1.5rem 2rem 2rem;
-}
+.resume-content { padding: 1.5rem 2rem 2rem; }
 
-/* Sections */
 .section-title {
   color: var(--accent);
   font-size: 1.05rem;
   font-weight: 700;
-  margin: 1.5rem 0 0.5rem;
+  margin: 1.25rem 0 0.45rem;
   letter-spacing: 0.03em;
   border-bottom: 1.5px solid var(--border);
   padding-bottom: 0.15rem;
@@ -109,62 +84,32 @@ ul {
   page-break-after: avoid;
 }
 
-.resume-content > .section-title:first-child {
-  margin-top: 0;
-}
+.resume-content > .section-title:first-child { margin-top: 0; }
 
 .skills-list {
   font-size: 0.95rem;
-  margin-bottom: 1rem;
-  padding-left: 1.15rem;
+  margin-bottom: 0.7rem;
+  padding-left: 1.1rem;
 }
 
-.skills-list li {
-  margin-bottom: 0.35rem;
-}
+.skills-list li { margin-bottom: 0.22rem; }
+.resume-content li { margin-bottom: 0.28rem; }
 
-.resume-content li {
-  margin-bottom: 0.45rem;
-}
-
-/* Long jobs may split across pages; single bullets and short blocks stay whole */
-.job-block {
-  margin-bottom: 1rem;
-}
-
-.job-block li,
-.job-block p {
+.job-block { margin-bottom: 0.7rem; }
+.job-block li, .job-block p {
   break-inside: avoid;
   page-break-inside: avoid;
 }
 
-.job-title,
-.job-meta,
-.job-scope {
+.job-title, .job-meta, .job-scope {
   break-after: avoid;
   page-break-after: avoid;
 }
 
-.job-title {
-  font-weight: 600;
-  font-size: 1.02rem;
-  margin: 0;
-}
+.job-title { font-weight: 600; font-size: 1rem; margin: 0; }
+.job-meta { color: var(--muted); font-size: 0.91rem; margin: 0.12rem 0 0.18rem; }
+.job-scope { color: #495057; font-size: 0.89rem; font-style: italic; margin: 0 0 0.32rem; }
 
-.job-meta {
-  color: var(--muted);
-  font-size: 0.95rem;
-  margin: 0.15rem 0 0.2rem;
-}
-
-.job-scope {
-  color: #495057;
-  font-size: 0.92rem;
-  font-style: italic;
-  margin: 0 0 0.4rem;
-}
-
-/* Download button + menu */
 .print-actions {
   position: fixed;
   top: 1.25rem;
@@ -188,9 +133,7 @@ ul {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.print-btn:hover {
-  background: #3a5580;
-}
+.print-btn:hover { background: #3a5580; }
 
 .print-menu {
   margin-top: 0.5rem;
@@ -203,10 +146,7 @@ ul {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.print-menu[hidden] {
-  display: none;
-}
-
+.print-menu[hidden] { display: none; }
 .print-menu-title {
   margin: 0.25rem 0.5rem 0.35rem;
   font-size: 0.72rem;
@@ -231,46 +171,16 @@ ul {
   color: var(--text);
 }
 
-.print-menu-item:hover {
-  background: #f4f6fa;
-}
-
-.print-menu-item strong {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.15rem;
-}
-
-.print-menu-item span {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--muted);
-  font-weight: 400;
-}
+.print-menu-item:hover { background: #f4f6fa; }
+.print-menu-item strong { display: block; font-weight: 600; margin-bottom: 0.15rem; }
+.print-menu-item span { display: block; font-size: 0.8rem; color: var(--muted); font-weight: 400; }
 
 @media (max-width: 900px) {
-  /* Keep the card off the screen edges and line the header up with the body text */
-  .resume-wrapper {
-    margin: 1rem;
-    border-radius: 10px;
-  }
-
-  .resume-header {
-    padding: 1.5rem 1.25rem 1.25rem;
-  }
-
-  .resume-header h1 {
-    font-size: 1.7rem;
-  }
-
-  .resume-header h2 {
-    font-size: 1.05rem;
-  }
-
-  .resume-content {
-    padding: 1.25rem 1.25rem 1.5rem;
-  }
-
+  .resume-wrapper { margin: 1rem; border-radius: 10px; }
+  .resume-header { padding: 1.5rem 1.25rem 1.25rem; }
+  .resume-header h1 { font-size: 1.7rem; }
+  .resume-header h2 { font-size: 1.05rem; }
+  .resume-content { padding: 1.25rem 1.25rem 1.5rem; }
   .print-actions {
     position: static;
     align-items: stretch;
@@ -279,35 +189,21 @@ ul {
     background: #fff;
     border-bottom: 1px solid var(--border);
   }
-
-  .print-btn {
-    width: 100%;
-  }
-
-  .print-menu {
-    min-width: 100%;
-    max-width: none;
-  }
+  .print-btn { width: 100%; }
+  .print-menu { min-width: 100%; max-width: none; }
 }
 
-/* Print / PDF: flat header, no background graphics needed */
 @media print {
-  @page {
-    size: letter;
-    margin: 0.6in;
-  }
+  @page { size: letter; margin: 0.45in 0.48in; }
 
-  .print-actions,
-  .print-menu {
-    display: none !important;
-  }
+  .print-actions, .print-menu { display: none !important; }
 
   body {
     background: #fff !important;
     margin: 0;
     font-family: var(--font-sans);
-    font-size: 10.5pt;
-    line-height: 1.12;
+    font-size: 9.7pt;
+    line-height: 1.1;
     color: #000;
   }
 
@@ -323,71 +219,38 @@ ul {
   .resume-header {
     background: #fff !important;
     color: #000 !important;
-    padding: 0 0 10pt !important;
-    border-bottom: 2pt solid var(--header-dark);
+    padding: 0 0 7pt !important;
+    border-bottom: 1.5pt solid var(--header-dark);
     -webkit-print-color-adjust: economy;
     print-color-adjust: economy;
   }
 
-  .resume-header h1 {
-    font-size: 20pt;
-    color: var(--header-dark);
-  }
+  .resume-header h1 { font-size: 19pt; color: var(--header-dark); }
+  .resume-header h2 { font-size: 10.8pt; color: var(--accent); opacity: 1; }
+  .resume-header .contact { font-size: 8.7pt; margin-top: 4pt; line-height: 1.35; }
+  .resume-header .contact span { margin-right: 0.75rem; margin-bottom: 0; }
+  .resume-header a { color: #1a4a7a !important; text-decoration: underline !important; }
 
-  .resume-header h2 {
-    font-size: 12pt;
-    color: var(--accent);
-    opacity: 1;
-  }
-
-  .resume-header .contact {
-    font-size: 9.5pt;
-    margin-top: 6pt;
-  }
-
-  .resume-header a {
-    color: #1a4a7a !important;
-    text-decoration: underline !important;
-  }
-
-  .resume-content {
-    padding: 8pt 0 0 !important;
-  }
-
+  .resume-content { padding: 5pt 0 0 !important; }
   .section-title {
-    font-size: 11pt;
-    margin-top: 10pt;
-    margin-bottom: 4pt;
+    font-size: 10.2pt;
+    margin-top: 7pt;
+    margin-bottom: 2.5pt;
     color: var(--header-dark);
     border-bottom-color: #ccc;
     break-after: avoid;
   }
 
-  .job-title {
-    font-size: 10.5pt;
-  }
+  .job-title { font-size: 9.8pt; }
+  .job-meta { font-size: 8.8pt; margin-top: 0.5pt; margin-bottom: 1pt; }
+  .job-scope { font-size: 8.5pt; margin-bottom: 2pt; }
+  .skills-list, .resume-content li { font-size: 9.2pt; }
+  .skills-list { margin-bottom: 3pt; }
+  .skills-list li, .resume-content li { margin-bottom: 1.8pt; }
+  .job-block { margin-bottom: 4pt; }
+  p { margin-bottom: 3pt; }
+  ul { margin-bottom: 4pt; padding-left: 13pt; }
 
-  .job-meta,
-  .job-scope {
-    font-size: 9.5pt;
-  }
-
-  .skills-list,
-  .resume-content li {
-    font-size: 10pt;
-  }
-
-  .job-block {
-    margin-bottom: 8pt;
-  }
-
-  a {
-    color: #1a4a7a;
-    text-decoration: underline;
-  }
-
-  a[href^="http"]:after,
-  a[href^="mailto"]:after {
-    content: none;
-  }
+  a { color: #1a4a7a; text-decoration: underline; }
+  a[href^="http"]:after, a[href^="mailto"]:after { content: none; }
 }

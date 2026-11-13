@@ -45,7 +45,7 @@
           <li>Set up monitoring and on-call for the core data pipelines: health checks, Grafana dashboards, request tracing (OpenTelemetry), searchable logs (OpenSearch) and GoAlert paging schedules. I handle incident response for production and track down the cause, whether it is in Kubernetes, a database or the network.</li>
           <li>Led most of the migration from on-premises Active Directory to Microsoft Entra ID. Entra ID is now the source of truth for accounts, and the old directory is kept read-only.</li>
           <li>Built a Kubernetes pipeline that generates tens of thousands of marketing images from business data in a single day. The manual process it replaced took a month.</li>
-          <li>Designing and building a general-purpose internal AI agent platform on Kubernetes, using self-hosted LLMs and MCP tool servers. Ordinary code, not the model, decides which steps run and in what order. Still in development.</li>
+          <li>Designed and launched a self-hosted AI agent platform, now rolling out to internal teams. A FastAPI dispatcher queues work and runs each attempt as a short-lived Kubernetes Job, using self-hosted LLMs (Ollama), read-only MCP tool servers, single sign-on and an audit record for every call. Ordinary code, not the model, decides which steps run.</li>
         </ul>
       </div>
 

@@ -1,7 +1,8 @@
 (function () {
   var PAGES = {
     devops: "index.html",
-    ai: "ai-engineering.html"
+    ai: "ai-engineering.html",
+    systems: "systems-administration.html"
   };
   var menu;
   var toggle;
